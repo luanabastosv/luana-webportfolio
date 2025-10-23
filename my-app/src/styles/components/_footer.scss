@@ -1,0 +1,31 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: auto;
+    font-weight: 200;
+    align-items: end;
+    a {
+        img {
+            width: 75px;
+        }
+    }
+    div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 50%;
+        justify-content: space-between;
+        
+        ul {
+            padding-top: 2rem;
+            padding-bottom: 0;
+            margin: 0;
+        }
+    }
+}
+
+.underline {
+    text-decoration: underline;
+}

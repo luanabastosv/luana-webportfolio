@@ -1,0 +1,35 @@
+// Imports
+
+// Google Fonts - Import
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"');
+
+// Functions
+// @import './utilities/functions.scss';
+
+// Settings
+@import './base/settings';
+
+// Utilities
+@import './utilities/mixins.scss';
+@import './utilities/utility-classes';
+
+// Resets
+@import './base/reset';
+@import './base/type';
+
+// Components
+
+@import './components/wrapper';
+@import './components/nav';
+@import './components/topbar';
+@import './components/bottombar';
+@import './components/pagehome';
+// @import './components/sectionsnav';
+// @import './components/homepage';
+// @import './components/movieprofile';
+@import './components/footer';
+// @import './components/hero';
+// @import './components/favpage';
+// @import './components/about';
+
+

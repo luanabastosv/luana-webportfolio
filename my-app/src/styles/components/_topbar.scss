@@ -1,0 +1,13 @@
+.top-bar {
+    background-color: $medium-orange;
+    text-align: center;
+    p {
+        text-transform: lowercase;
+        padding: .8rem 2.5rem;
+        color: $white;
+        font-size: $font-small;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+
+}

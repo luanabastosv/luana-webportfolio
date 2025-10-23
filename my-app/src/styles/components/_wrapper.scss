@@ -1,0 +1,30 @@
+.wrapper {
+  background-color: $beige;
+  background-image: repeating-linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.03) 0,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparent 1px,
+      transparent 40px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.03) 0,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparent 1px,
+      transparent 40px
+    );
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+  padding: 3rem 3rem;
+
+  @include mq(550px) {
+    padding: 3rem 5rem;
+  }
+
+  @include mq(1050px) {
+    padding: 3rem 9rem;
+  }
+}
