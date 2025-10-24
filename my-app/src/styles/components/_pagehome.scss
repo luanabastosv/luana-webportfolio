@@ -44,12 +44,13 @@
       align-items: center;
       width: 100%;
       h1 {
-        white-space: nowrap;
         margin: 0;
         line-height: 0.9;
         text-align: center;
         font-weight: 100;
         padding: 0;
+        font-size: 19rem;
+        letter-spacing: -40px;
       }
       p {
         margin: 0;
@@ -64,6 +65,11 @@
           font-weight: 500;
         }
       }
+      img {
+      align-self:flex-end;
+      margin-top: 1.5rem;
+      width: 80px;
+    }
     }
   }
 
@@ -115,12 +121,12 @@
           font-size: $font-small;
           width: 70%;
           text-decoration: none;
-          color: $medium-orange;
-          background-color: $white;
+          color: $dark-orange;
+          background-color: $beige;
           padding: 0.7rem 0.2rem;
-          border: $medium-orange 2px solid;
+          border: $dark-orange 2px solid;
           font-weight: 400;
-          box-shadow: 6px 6px 0 $medium-orange;
+          box-shadow: 6px 6px 0 $dark-orange;
           transition: all 0.2s ease;
           text-align: center;
         }
