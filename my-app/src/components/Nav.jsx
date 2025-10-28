@@ -29,9 +29,9 @@ function Nav() {
               alt={menuOpen ? "Close menu" : "Luana Bastos logo"}
             />
           </button>
-          <a href="/" onClick={(e) => handleNavClick(e, "/")}>
+          {/* <a href="/" onClick={(e) => handleNavClick(e, "/")}>
             <p>lubastos.com</p>
-          </a>
+          </a> */}
         </div>
         <ul>
           <li>
@@ -47,11 +47,6 @@ function Nav() {
           <li>
             <a href="/projects" onClick={(e) => handleNavClick(e, "/projects")}>
               Projects
-            </a>
-          </li>
-          <li>
-            <a href="/contact" onClick={(e) => handleNavClick(e, "/contact")}>
-              Contact
             </a>
           </li>
         </ul>

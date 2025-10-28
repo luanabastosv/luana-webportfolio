@@ -1,7 +1,10 @@
+import data from "../data/website-content.json";
 function TopBar() {
+  const topbar = data.topbar;
+  
   return (
     <div className="top-bar">
-        <p>&lt;  from chaos to clarity // creating colorful solutions for a digital world  &gt;</p>
+        <p dangerouslySetInnerHTML={{ __html: topbar.content }} />
     </div>
   );
 }

@@ -1,0 +1,35 @@
+{
+    "topbar": {
+        "content": "&lt;&nbsp;&nbsp;&nbsp;from chaos to clarity // creating digital experiences with <strong>creativity, flow, and a touch of adventure.</strong>&nbsp;<img src='public/assets/images/lightning.svg' alt='Luana's Logo'/>&nbsp;&gt;"
+    },
+    "homepage": {
+        "title": "Luana.<span>Bastos</span>",
+        "subheading": "&#123;&nbsp;&nbsp;&nbsp;&nbsp;Front-End <strong>Web Developer</strong> and <strong>UI/UX Designer</strong>&nbsp;&nbsp;&nbsp;&nbsp;&#125;",
+        "description": [
+            "Fueled by creativity and curiosity, I bring <strong> energy, organization, and intention </strong> to everything I build.",
+            "&nbsp;",
+            "Whether it's crafting digital experiences or chasing waves, I'm all about flow and meaningful connection."
+        ],
+        "secsubheading": "Here is where creativity meets code.",
+        "buttons": {
+            "projects": "See my projects",
+            "about": "Get to know me"
+        }
+    },
+    "about": {
+        "heading": "About Me",
+        "text": "I’m passionate about design and technology. My work combines aesthetics and functionality to create balanced, intentional experiences."
+    },
+    "projects": [
+        {
+            "title": "Creative Web Portfolio",
+            "description": "A personal site built with React to showcase design and development projects.",
+            "link": "https://yourportfolio.com"
+        },
+        {
+            "title": "Photography Series",
+            "description": "Visual storytelling through light, shape, and color.",
+            "link": "https://yourportfolio.com/photography"
+        }
+    ]
+}
