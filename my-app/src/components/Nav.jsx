@@ -29,9 +29,6 @@ function Nav() {
               alt={menuOpen ? "Close menu" : "Luana Bastos logo"}
             />
           </button>
-          {/* <a href="/" onClick={(e) => handleNavClick(e, "/")}>
-            <p>lubastos.com</p>
-          </a> */}
         </div>
         <ul>
           <li>

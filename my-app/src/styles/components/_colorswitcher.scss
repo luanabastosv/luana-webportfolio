@@ -1,0 +1,47 @@
+.color-switcher {
+  position: absolute;
+  z-index: 99;
+  right: 9rem;
+
+  .color-button {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    text-transform: uppercase;
+    width: 18rem;
+    border: $dark-orange 2px solid;
+    padding: 0.8rem 1.2rem;
+    background-color: $white;
+    cursor: pointer;
+    p {
+      font-weight: 500;
+    }
+  }
+
+  .color-options {
+    display: none;
+  }
+
+  &.active {
+    .color-options {
+      display: flex;
+      flex-direction: column;
+      width: 18rem;
+      border-left: $medium-orange 2px solid;
+      border-bottom: $medium-orange 2px solid;
+      border-right: $medium-orange 2px solid;
+      padding: 1.5rem 2rem;
+      background-color: $white;
+      gap: 1.5rem;
+
+      div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        img {
+          width: 2rem;
+        }
+      }
+    }
+  }
+}

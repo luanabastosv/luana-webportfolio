@@ -5,6 +5,7 @@ function PageHome() {
   return (
     <main>
       <section className="page-home">
+
         <div className="hero">
           <h1 dangerouslySetInnerHTML={{ __html: home.title }} />
           <p dangerouslySetInnerHTML={{ __html: home.subheading }} />
@@ -24,16 +25,15 @@ function PageHome() {
                 href="/projects"
                 onClick={(e) => handleNavClick(e, "/projects")}
               >
-                {home.buttons.projects}
+                {home.buttons.first}
               </a>
               <a href="/about" onClick={(e) => handleNavClick(e, "/about")}>
-                {home.buttons.about}
+                {home.buttons.second}
               </a>
             </div>
           </div>
         </div>
       </section>
-      .
     </main>
   );
 }

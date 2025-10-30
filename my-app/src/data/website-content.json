@@ -12,8 +12,8 @@
         ],
         "secsubheading": "Here is where creativity meets code.",
         "buttons": {
-            "projects": "See my projects",
-            "about": "Get to know me"
+            "first": "See my projects",
+            "second": "Get to know me"
         }
     },
     "about": {

@@ -6,9 +6,12 @@
         padding: .8rem 2.5rem;
         color: $white;
         font-size: $font-small;
-        font-weight: 300;
-        font-style: italic;
-        letter-spacing: 4px;
+        font-weight: 100;
+        // font-style: italic;
+        letter-spacing: 3px;
+        strong {
+            font-weight: 700;
+        }
     }
 
 }
