@@ -1,24 +1,41 @@
 // App Style Settings
 
 // Colors - Tangerine Theme
-$bkg-color: #FFEADE;
-$dark-color: #DF6C25;
-$medium-color: #FE914E;
-$light-color: #FFBE96;
-$white: white;
+:root {
+  --bkg-color: #FFEADE;
+  --dark-color: #DF6C25;
+  --medium-color: #FE914E;
+  --light-color: #FFBE96;
+  --white: #ffffff;
 
-// Type
-$bodyFont: 'adrianna', sans-serif;
-$headingFont: 'Limelight', sans-serif;
+  --body-font: 'adrianna', sans-serif;
+  --heading-font: 'Limelight', sans-serif;
 
-// Layout
-// $section-padding: em(16) em(20);igh
+  --font-small: 14px;
+  --font-medium: 18px;
+  --font-xmedium: 22px;
+  --font-large: 26px;
+  --font-xlarge: 35px;
+}
 
-// Sizes
-$font-small: 14px;
-$font-medium: 18px;
-$font-xmedium: 22px;
-$font-large: 26px;
-$font-xlarge: 35px;
+[data-theme="happy-woods"] {
+  --bkg-color: #E4F1E1;
+  --dark-color: #3B6B3B;
+  --medium-color: #5D8A5D;
+  --light-color: #A9C9A5;
+}
+[data-theme="surfing-sky"] {
+  --bkg-color: #cdd5e0;
+  --dark-color: #19467f;
+  --medium-color: #3989a2;
+  --light-color: #4f93d2;
+}
+[data-theme="strawberry-fields"] {
+  --bkg-color: #ffb7b8;
+  --dark-color: #db1516;
+  --medium-color: #e53939;
+  --light-color: #ff8f8e;
+}
+
 
 

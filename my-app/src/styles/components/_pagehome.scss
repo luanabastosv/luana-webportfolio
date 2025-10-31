@@ -21,19 +21,20 @@
     p {
       margin-top: 1rem;
       padding: 0;
-      font-family: $bodyFont;
+      font-family: var(--body-font);
       font-weight: 100;
       text-align: left;
-      font-size: $font-medium;
+      font-size: var(--font-medium);
       .bold {
         font-weight: 500;
       }
     }
 
-    img {
+    svg {
       align-self: flex-start;
       margin-top: 1rem;
       width: 50px;
+      color: var(--dark-color);
     }
 
     @include mq(770px) {
@@ -53,21 +54,22 @@
         .transp {
           opacity: 0.2;
         }
-         img {
+         svg {
         align-self: center;
         margin-top: 1.5rem;
         width: 70vw;
         margin-bottom: 1rem;
+        color: var(--dark-color);
       }
       }
       p {
         margin: 0;
         width: 70vw;
         padding: 0;
-        font-family: $bodyFont;
+        font-family: var(--body-font);
         font-weight: 100;
         text-align: right;
-        font-size: $font-large;
+        font-size: var(--font-large);
         white-space: inherit;
         .bold {
           font-weight: 500;
@@ -86,14 +88,14 @@
     align-items: center;
 
     .home-content-text {
-      background-color: $dark-color;
+      background-color: var(--dark-color);
       padding: 6rem 2.5rem;
       margin-top: 3rem;
       margin-bottom: 3rem;
       p {
-        color: $white;
+        color: var(--white);
         text-align: center;
-        font-size: $font-small;
+        font-size: var(--font-small);
         font-weight: 200;
         line-height: 25px;
       }
@@ -102,14 +104,15 @@
     .home-content-quote {
       text-align: center;
 
-      img {
+      svg {
         margin-bottom: 2rem;
         height: 5rem;
+        color: var(--light-color);
       }
 
       h2 {
-        font-family: $headingFont;
-        font-size: $font-xlarge;
+        font-family: var(--heading-font);
+        font-size: var(--font-xlarge);
         margin-bottom: 3rem;
         line-height: 37px;
         font-weight: 100;
@@ -122,20 +125,20 @@
         justify-content: center;
 
         a {
-          font-size: $font-small;
+          font-size: var(--font-small);
           width: 70%;
           text-decoration: none;
-          color: $dark-color;
-          background-color: $bkg-color;
+          color: var(--dark-color);
+          background-color: var(--bkg-color);
           padding: 0.7rem 0.2rem;
-          border: $dark-color 2px solid;
+          border: var(--dark-color) 2px solid;
           font-weight: 500;
-          box-shadow: 6px 6px 0 $dark-color;
+          box-shadow: 6px 6px 0 var(--dark-color);
           transition: all 0.2s ease;
           text-align: center;
         }
         a:nth-child(2) {
-          box-shadow: 6px 6px 0 $light-color;
+          box-shadow: 6px 6px 0 var(--light-color);
           font-weight: 200;
         }
       }
@@ -155,7 +158,7 @@
         align-content: center;
 
         p {
-          font-size: $font-large;
+          font-size: var(--font-large);
           text-align: left;
           max-width: 40%;
           align-self: center;
@@ -168,9 +171,10 @@
         max-width: 40%;
         text-align: right;
 
-        img {
+        svg {
           margin-bottom: 2rem;
           height: 8rem;
+          color: var(--light-color);
         }
 
         h2 {
@@ -183,7 +187,7 @@
           justify-content: flex-end;
           a {
             width: 40%;
-            font-size: $font-medium;
+            font-size: var(--font-medium);
           }
         }
       }

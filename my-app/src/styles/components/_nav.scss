@@ -6,8 +6,9 @@ nav {
       padding: 0;
       cursor: pointer;
       z-index: 200;
-      img {
+      svg {
         height: 45px;
+        color: var(--dark-color);
       }
      
     }
@@ -23,15 +24,16 @@ nav {
         padding: 0;
         cursor: pointer;
         z-index: 200;
-        img {
+        svg {
           height: 45px;
+          color: var(--dark-color);
         }
         
       }
   
       p {
         margin-left: 1rem;
-        font-family: $bodyFont;
+        font-family: var(--body-font);
         font-weight: 400;
       }
 
@@ -54,17 +56,17 @@ nav {
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: $dark-color;
+      background: var(--dark-color);
       list-style: none;
-      font-size: $font-medium;
+      font-size: var(--font-medium);
       gap: 1rem;
       z-index: 100;
       margin: 0;
       li {
         a {
-          color: $bkg-color;
+          color: var(--bkg-color);
           &:hover {
-            color: $medium-color;
+            color: var(--medium-color);
           }
         }
       }
@@ -77,7 +79,7 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     letter-spacing: 0.5px;
-    font-size: $font-xmedium;
+    font-size: var(--font-xmedium);
     font-weight: 300;
     padding: 0;
     margin: 0;
@@ -94,8 +96,9 @@ nav {
       padding: 0;
       cursor: pointer;
       z-index: 200;
-      img {
+      svg {
         height: 45px;
+        color: var(--medium-color );
       }
       &:hover {
         rotate: 45deg;
@@ -109,16 +112,16 @@ nav {
         align-self: center;
         a {
           margin-left: 3rem;
-          font-family: $bodyFont;
+          font-family: var(--body-font);
           &:hover {
-            color: $medium-color;
+            color: var(--medium-color);
           }
         }
         list-style: none;
       }
       display: flex;
       flex-direction: row;
-      color: $dark-color;
+      color: var(--dark-color);
       align-self: normal;
       padding: 0;
       margin: 0;
@@ -126,7 +129,7 @@ nav {
     &.menu-open {
       ul {
         a {
-          font-family: $headingFont;
+          font-family: var(--heading-font);
         }
         display: flex;
         flex-direction: column;
@@ -135,7 +138,7 @@ nav {
         left: 0;
         width: 100vw;
         height: 100vh;
-        background: $dark-color;
+        background: var(--dark-color);
         list-style: none;
         font-size: 10rem;
         line-height: 8rem;
@@ -145,7 +148,7 @@ nav {
         li {
           align-self: baseline;
           a {
-            color: $bkg-color;
+            color: var(--bkg-color);
           }
         }
       }

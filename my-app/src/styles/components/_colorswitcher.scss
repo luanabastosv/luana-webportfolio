@@ -2,7 +2,7 @@
   position: absolute;
   display: block;
   top: 90px;
-  right: 210px;
+  right: 250px;
   
  
   .color-button {
@@ -11,17 +11,51 @@
     justify-content: space-between;
     text-transform: uppercase;
     width: 24rem;
-    border: $dark-color 2px solid;
+    border: var(--dark-color) 2px solid;
     padding: 0.8rem 1.2rem;
-    background-color: $white;
+    background-color: var(--white);
     cursor: pointer;
     p {
-      font-weight: 500;
+      font-weight: 400;
+      font-size: var(--font-medium);
     }
   }
 
   .color-options {
     display: none;
+
+    div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: var(--font-medium);
+
+      a {
+        display: inline-block;
+
+        &.inactive {
+          opacity: 0.4;
+          transform: rotateY(180deg);
+
+          &:hover {
+            opacity: 1;
+            transform: rotateY(0deg);
+          }
+        }
+
+        &.active {
+          opacity: 1;
+          transform: rotateY(0deg);
+        }
+
+        svg.icon {
+          width: 2rem;
+          height: auto;
+          color: var(--dark-color);
+          transition: color 0.3s ease;
+        }
+      }
+    }
   }
 
   &.active {
@@ -29,22 +63,12 @@
       display: flex;
       flex-direction: column;
       width: 24rem;
-      border-left: $medium-color 2px solid;
-      border-bottom: $medium-color 2px solid;
-      border-right: $medium-color 2px solid;
+      border-left: var(--medium-color) 2px solid;
+      border-bottom: var(--medium-color) 2px solid;
+      border-right: var(--medium-color) 2px solid;
       padding: 1.5rem 2rem;
-      background-color: $white;
+      background-color: var(--white);
       gap: 1.5rem;
-
-      div {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        font-size: $font-medium;
-        img {
-          width: 2rem;
-        }
-      }
     }
   }
 }

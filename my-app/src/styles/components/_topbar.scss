@@ -1,11 +1,11 @@
 .top-bar {
-    background-color: $medium-color;
+    background-color: var(--medium-color);
     text-align: center;
     p {
         text-transform: lowercase;
         padding: .8rem 2.5rem;
-        color: $white;
-        font-size: $font-small;
+        color: var(--white);
+        font-size: var(--font-small);
         font-weight: 100;
         // font-style: italic;
         letter-spacing: 3px;
