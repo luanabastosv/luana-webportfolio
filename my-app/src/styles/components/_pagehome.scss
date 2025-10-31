@@ -12,10 +12,10 @@
       margin: 0;
       padding: 0;
       text-align: left;
-      font-weight: 100;
+      font-weight: 900;
       font-size: 8rem;
       line-height: 92px;
-      letter-spacing: -12px;
+
     }
 
     p {
@@ -43,33 +43,37 @@
       justify-content: center;
       align-items: center;
       width: 100%;
-      h1 {
-        margin: 0;
-        line-height: 0.9;
-        text-align: center;
-        font-weight: 100;
-        padding: 0;
-        font-size: 19rem;
-        letter-spacing: -40px;
+     .hero-text {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        margin-bottom: 2rem;
+        .transp {
+          opacity: 0.2;
+        }
+         img {
+        align-self: center;
+        margin-top: 1.5rem;
+        width: 70vw;
+        margin-bottom: 1rem;
+      }
       }
       p {
         margin: 0;
+        width: 70vw;
         padding: 0;
         font-family: $bodyFont;
         font-weight: 100;
         text-align: right;
         font-size: $font-large;
         white-space: inherit;
-        align-self: flex-end;
         .bold {
           font-weight: 500;
         }
       }
-      img {
-        align-self: flex-end;
-        margin-top: 1.5rem;
-        width: 80px;
-      }
+     
     }
   }
 
@@ -82,7 +86,7 @@
     align-items: center;
 
     .home-content-text {
-      background-color: $dark-orange;
+      background-color: $dark-color;
       padding: 6rem 2.5rem;
       margin-top: 3rem;
       margin-bottom: 3rem;
@@ -121,17 +125,17 @@
           font-size: $font-small;
           width: 70%;
           text-decoration: none;
-          color: $dark-orange;
-          background-color: $beige;
+          color: $dark-color;
+          background-color: $bkg-color;
           padding: 0.7rem 0.2rem;
-          border: $dark-orange 2px solid;
+          border: $dark-color 2px solid;
           font-weight: 500;
-          box-shadow: 6px 6px 0 $dark-orange;
+          box-shadow: 6px 6px 0 $dark-color;
           transition: all 0.2s ease;
           text-align: center;
         }
         a:nth-child(2) {
-          box-shadow: 6px 6px 0 $light-orange;
+          box-shadow: 6px 6px 0 $light-color;
           font-weight: 200;
         }
       }

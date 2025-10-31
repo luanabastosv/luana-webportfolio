@@ -16,7 +16,7 @@ function AppRouter() {
       <div className="wrapper">
 
         <Nav />
-        <ColorSwitcher />
+       
         <Routes>
           <Route path="/" element={<PageHome />} />
           <Route path="/about" element={<PageAbout />} />

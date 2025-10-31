@@ -1,15 +1,17 @@
 .color-switcher {
   position: absolute;
-  z-index: 99;
-  right: 9rem;
-
+  display: block;
+  top: 90px;
+  right: 210px;
+  
+ 
   .color-button {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     text-transform: uppercase;
-    width: 18rem;
-    border: $dark-orange 2px solid;
+    width: 24rem;
+    border: $dark-color 2px solid;
     padding: 0.8rem 1.2rem;
     background-color: $white;
     cursor: pointer;
@@ -26,10 +28,10 @@
     .color-options {
       display: flex;
       flex-direction: column;
-      width: 18rem;
-      border-left: $medium-orange 2px solid;
-      border-bottom: $medium-orange 2px solid;
-      border-right: $medium-orange 2px solid;
+      width: 24rem;
+      border-left: $medium-color 2px solid;
+      border-bottom: $medium-color 2px solid;
+      border-right: $medium-color 2px solid;
       padding: 1.5rem 2rem;
       background-color: $white;
       gap: 1.5rem;
@@ -38,6 +40,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        font-size: $font-medium;
         img {
           width: 2rem;
         }

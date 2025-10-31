@@ -1,10 +1,94 @@
 nav {
-  div {
+  .left-sec {
+    .menu-button {
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      z-index: 200;
+      img {
+        height: 45px;
+      }
+     
+    }
+
+    div {
+      display: flex;
+      flex-direction: row;
+      align-items: right;
+  
+      .logo-button {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        z-index: 200;
+        img {
+          height: 45px;
+        }
+        
+      }
+  
+      p {
+        margin-left: 1rem;
+        font-family: $bodyFont;
+        font-weight: 400;
+      }
+
+      
+    }
+  }
+
+  ul {
+    display: none;
+  }
+  &.menu-open {
+    
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: $dark-color;
+      list-style: none;
+      font-size: $font-medium;
+      gap: 1rem;
+      z-index: 100;
+      margin: 0;
+      li {
+        a {
+          color: $bkg-color;
+          &:hover {
+            color: $medium-color;
+          }
+        }
+      }
+    }
+  }
+
+  // DESKTOP/TABLET
+  @include mq(1050px) {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    letter-spacing: 0.5px;
+    font-size: $font-xmedium;
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
     align-items: center;
+    
+    section {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
 
-    .logo-button {
+      .menu-button {
       background: none;
       border: none;
       padding: 0;
@@ -17,55 +101,7 @@ nav {
         rotate: 45deg;
       }
     }
-
-    p {
-      margin-left: 1rem;
-      font-family: $bodyFont;
-      font-weight: 400;
     }
-  }
-  ul {
-    display: none;
-  }
-  &.menu-open {
-    ul {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: $dark-orange;
-      list-style: none;
-      font-size: $font-medium;
-      gap: 1rem;
-      z-index: 100;
-      margin: 0;
-      li {
-        a {
-          color: $beige;
-          &:hover {
-            color: $medium-orange;
-          }
-        }
-      }
-    }
-  }
-  @include mq(1050px) {
-      position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    letter-spacing: 0.5px;
-    font-size: $font-xmedium;
-    font-weight: 300;
-    padding: 0;
-    margin: 0;
-    align-items: baseline;
-
     ul {
       li {
         padding: 0;
@@ -74,15 +110,15 @@ nav {
         a {
           margin-left: 3rem;
           font-family: $bodyFont;
-            &:hover {
-            color: $medium-orange;
+          &:hover {
+            color: $medium-color;
           }
         }
         list-style: none;
       }
       display: flex;
       flex-direction: row;
-      color: $dark-orange;
+      color: $dark-color;
       align-self: normal;
       padding: 0;
       margin: 0;
@@ -99,7 +135,7 @@ nav {
         left: 0;
         width: 100vw;
         height: 100vh;
-        background: $dark-orange;
+        background: $dark-color;
         list-style: none;
         font-size: 10rem;
         line-height: 8rem;
@@ -109,10 +145,11 @@ nav {
         li {
           align-self: baseline;
           a {
-            color: $beige;
+            color: $bkg-color;
           }
         }
       }
     }
   }
+
 }

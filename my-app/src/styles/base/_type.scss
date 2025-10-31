@@ -2,13 +2,13 @@ Type
 
 body {
     font-family: $bodyFont;
-    color: $dark-orange;
+    color: $dark-color;
     text-transform: uppercase;
 }
 
 h1, h2, h3, h4 {
     font-family: $headingFont;
-    color: $dark-orange;
+    color: $dark-color;
 }
 
 h1, h2, h3, h4, p {
@@ -18,13 +18,13 @@ h1, h2, h3, h4, p {
 p {
     font-family: $bodyFont;
     text-transform: uppercase;
-    color: $dark-orange;
+    color: $dark-color;
     font-weight: 100;
 }
 
 a, li {
     text-decoration: none;
-    color: $dark-orange;
+    color: $dark-color;
     text-transform: uppercase;
     font-family: $bodyFont;
     list-style: none;

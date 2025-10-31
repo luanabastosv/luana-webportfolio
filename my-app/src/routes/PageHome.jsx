@@ -7,7 +7,11 @@ function PageHome() {
       <section className="page-home">
 
         <div className="hero">
-          <h1 dangerouslySetInnerHTML={{ __html: home.title }} />
+          <div className="hero-text">
+          <img src="public/assets/images/Asset 13@1x.svg" alt="" className="transp" />
+          <img src="public/assets/images/Asset 13@1x.svg" alt="" />
+          <img src="public/assets/images/Asset 13@1x.svg" alt="" className="transp" />
+          </div>
           <p dangerouslySetInnerHTML={{ __html: home.subheading }} />
         </div>
 
