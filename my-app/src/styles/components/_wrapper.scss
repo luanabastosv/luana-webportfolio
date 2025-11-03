@@ -1,4 +1,6 @@
 .wrapper {
+  position: relative;
+  z-index: auto;
   background-color: var(--bkg-color);
   background-image: repeating-linear-gradient(
       to right,

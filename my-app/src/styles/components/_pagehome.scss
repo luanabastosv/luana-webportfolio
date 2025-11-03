@@ -7,48 +7,42 @@
     justify-self: center;
     align-items: center;
     width: 100%;
-
-    h1 {
-      margin: 0;
-      padding: 0;
-      text-align: left;
-      font-weight: 900;
-      font-size: 8rem;
-      line-height: 92px;
-
+    .hero-text {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0;
+        .transp {
+          opacity: 0.2;
+        }
+         svg {
+        align-self: center;
+        margin-top: 1.5rem;
+        width: 85vw;
+        margin-bottom: 1rem;
+        color: var(--dark-color);
+      }
     }
+
 
     p {
       margin-top: 1rem;
       padding: 0;
       font-family: var(--body-font);
       font-weight: 100;
-      text-align: left;
-      font-size: var(--font-medium);
+      text-align: center;
+      font-size: var(--font-xsmall);
       .bold {
         font-weight: 500;
       }
     }
 
-    svg {
-      align-self: flex-start;
-      margin-top: 1rem;
-      width: 50px;
-      color: var(--dark-color);
-    }
+ 
 
     @include mq(770px) {
-      margin-top: 30vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
      .hero-text {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
         gap: 4rem;
         margin-bottom: 2rem;
         .transp {
@@ -80,7 +74,7 @@
   }
 
   .home-content {
-    margin-bottom: 15rem;
+    margin-bottom: 10rem;
     margin-top: 15rem;
     display: flex;
     flex-direction: column-reverse;
@@ -89,13 +83,13 @@
 
     .home-content-text {
       background-color: var(--dark-color);
-      padding: 6rem 2.5rem;
+      padding: 8rem 4rem;
       margin-top: 3rem;
-      margin-bottom: 3rem;
+      margin-bottom: 0;
       p {
         color: var(--white);
         text-align: center;
-        font-size: var(--font-small);
+        font-size: var(--font-xsmall);
         font-weight: 200;
         line-height: 25px;
       }
@@ -143,6 +137,7 @@
         }
       }
     }
+    
     @include mq(770px) {
       flex-direction: row;
       justify-content: space-between;

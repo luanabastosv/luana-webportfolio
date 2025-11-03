@@ -14,7 +14,6 @@ function AppRouter() {
     <BrowserRouter>
       <TopBar />
       <div className="wrapper">
-
         <Nav />
        
         <Routes>
