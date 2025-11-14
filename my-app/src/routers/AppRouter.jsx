@@ -12,8 +12,8 @@ import ColorSwitcher from "../components/ColorSwitcher";
 function AppRouter() {
   return (
     <BrowserRouter>
-      <TopBar />
       <div className="wrapper">
+      <TopBar />
         <Nav />
        
         <Routes>

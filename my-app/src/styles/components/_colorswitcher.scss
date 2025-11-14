@@ -1,12 +1,12 @@
 .color-switcher {
   display: none;
 
-  @include mq(770px) {
+  @include mq(1050px) {
 
     position: absolute;
     display: block;
-    top: 0px;
-    right: 80px;
+    top: -6px;
+    right: 70px;
     
    
     .color-button {
@@ -14,14 +14,14 @@
       flex-direction: row-reverse;
       justify-content: space-between;
       text-transform: uppercase;
-      width: 24rem;
+      width: 17rem;
       border: var(--dark-color) 2px solid;
       padding: 0.8rem 1.2rem;
       background-color: var(--white);
       cursor: pointer;
       p {
         font-weight: 400;
-        font-size: var(--font-medium);
+        font-size: var(--font-xsmall);
       }
       &:hover {
         background-color: var(--light-color);
@@ -35,7 +35,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        font-size: var(--font-medium);
+        font-size: var(--font-xsmall);
   
         a {
           display: inline-block;
@@ -69,11 +69,11 @@
       .color-options {
         display: flex;
         flex-direction: column;
-        width: 24rem;
+        width: 17rem;
         border-left: var(--medium-color) 2px solid;
         border-bottom: var(--medium-color) 2px solid;
         border-right: var(--medium-color) 2px solid;
-        padding: 1.5rem 2rem;
+        padding: 1.5rem 1.5rem;
         background-color: var(--white);
         gap: 1.5rem;
       }

@@ -20,7 +20,7 @@
   display: flex;
   flex-direction: column;
   // justify-content: space-between;
-  padding: 3rem 3rem;
+  padding: 3rem 2rem;
 
   @include mq(550px) {
     padding: 3rem 5rem;

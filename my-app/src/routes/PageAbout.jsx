@@ -4,14 +4,14 @@ function PageAbout() {
       <section className="page-about">
         <div className="hero-about">
           <div className="main-content-about">
-            <h1>Front-End</h1>
             <div>
+              <h1>Front-End</h1>
               <button>Refresh</button>
               <img src="public/assets/images/luana-photo (37).png" alt="" />
+              <p>Also UI/UX Designer & Enthusiastic Creator</p>
+              <h2>Web Dev</h2>
             </div>
-            <h2>Web Dev</h2>
           </div>
-          <p>Also UI/UX Designer & Enthusiastic Creator</p>
         </div>
       </section>
     </main>

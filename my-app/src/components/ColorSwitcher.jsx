@@ -48,7 +48,7 @@ function ColorSwitcher() {
       ),
     },
     {
-      name: "Strawberry Fields",
+      name: "Strawberry",
       key: "strawberry-fields",
       svg: (
          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69 37" className="icon">
