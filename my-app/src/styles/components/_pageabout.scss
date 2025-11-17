@@ -10,6 +10,21 @@
   margin-top: calc(-3rem - 4rem);
   margin-bottom: 20rem;
   position: relative;
+
+  article {
+    position: absolute;
+    top: 80rem;
+    margin: 0 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    div {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;;
+    }
+  }
 }
 
 .hero-about {
