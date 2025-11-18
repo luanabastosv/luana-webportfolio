@@ -7,15 +7,17 @@ import Nav from "../components/Nav";
 import TopBar from "../components/TopBar";
 import BottomBar from "../components/BottomBar";
 import Footer from "../components/Footer";
-import ColorSwitcher from "../components/ColorSwitcher";
+
+import InteractiveBubble from "../components/InteractiveBubble";
 
 function AppRouter() {
   return (
     <BrowserRouter>
+        <InteractiveBubble />
       <div className="wrapper">
-      <TopBar />
+        <TopBar />
         <Nav />
-       
+
         <Routes>
           <Route path="/" element={<PageHome />} />
           <Route path="/about" element={<PageAbout />} />

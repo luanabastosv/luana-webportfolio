@@ -8,6 +8,24 @@
   --light-color: #FFBE96;
   --white: #ffffff;
 
+  // bubbles colors: 
+  --color-bg1: #FFEADE;
+  --color-bg2: #FFBE96;
+
+  --color1: 220, 100, 50;
+  --color2: 230, 140, 80;
+  --color3: 240, 200, 180;
+  --color4: 255, 200, 150;
+  --color5: 250, 230, 200;
+  --color6: 255, 180, 100;
+  --color7: 245, 210, 180;
+  --color-interactive: 255, 163, 81;
+
+  --blending: screen;
+
+
+
+
   --body-font: 'adrianna', sans-serif;
   --heading-font: 'Limelight', sans-serif;
   
@@ -26,19 +44,70 @@
   --dark-color: #3B6B3B;
   --medium-color: #5D8A5D;
   --light-color: #A9C9A5;
+
+// bubbles colors:
+  --color-bg1: #E4F1E1;
+  --color-bg2: #CFE8D2;
+
+  --color1: 70, 120, 70;
+  --color2: 90, 150, 90;
+  --color3: 120, 180, 120;
+  --color4: 150, 200, 150;
+  --color5: 190, 225, 185;
+  --color6: 110, 160, 110;
+  --color7: 165, 205, 170;
+  --color-interactive: 80, 140, 80;
+
+  --blending: screen;
 }
+
 [data-theme="surfing-sky"] {
   --bkg-color: #dee4ed;
   --dark-color: #054394;
   --medium-color: #3989a2;
   --light-color: #add4f8;
+
+// bubbles colors:
+  --color-bg1: #dee4ed;
+  --color-bg2: #b9d3ee;
+
+  --color1: 40, 100, 180;
+  --color2: 60, 130, 200;
+  --color3: 120, 170, 220;
+  --color4: 160, 200, 235;
+  --color5: 190, 220, 245;
+  --color6: 90, 150, 210;
+  --color7: 150, 190, 230;
+  --color-interactive: 70, 130, 200;
+
+  --blending: screen;
 }
 [data-theme="strawberry-fields"] {
   --bkg-color: #ffb7b8;
   --dark-color: #db1516;
   --medium-color: #e53939;
   --light-color: #ff8f8e;
+
+
+// bubbles colors:
+  --color-bg1: #ffb7b8;
+  --color-bg2: #ff9a9c;
+
+   
+  --color1: 210, 50, 60;
+  --color2: 230, 80, 90;
+  --color3: 240, 150, 160;
+  --color4: 255, 170, 170;
+  --color5: 255, 200, 200;
+  --color6: 230, 110, 120;
+  --color7: 250, 160, 170;
+
+
+  --color-interactive: 255, 90, 110;
+
+  --blending: screen;
 }
+
 
 
 
