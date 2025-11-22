@@ -1,60 +1,77 @@
 .color-switcher {
-  display: none;
+  .color-button {
+    display: flex;
+    position: fixed;
+    bottom: 8rem;
+    left: 5rem;
+    z-index: 999;
+    color: var(--dark-color);
+  }
+
+  .color-options {
+    display: none;
+  }
 
   @include mq(1050px) {
-
-    position: absolute;
+    position: relative;
     display: block;
-    top: -6px;
-    right: 70px;
-    
-   
+
     .color-button {
+      position: static;
       display: flex;
       flex-direction: row-reverse;
       justify-content: space-between;
       text-transform: uppercase;
       width: 4.5rem;
-      color: var(--medium-color);
+      color: var(--dark-color);
       padding: 0.8rem 1.2rem;
-     
+      margin-right: 1rem;
       cursor: pointer;
+
       p {
         font-weight: 400;
         font-size: var(--font-xsmall);
       }
+
       &:hover {
-        background-color: var(--light-color);
+        color: var(--medium-color);
       }
     }
-  
+
     .color-options {
       display: none;
-  
+      position: absolute;
+      top: 5rem;
+      right: 2.5rem;
+      width: 17rem;
+      padding: 1.5rem;
+      gap: 1.5rem;
+      flex-direction: column;
+
       div {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         font-size: var(--font-xsmall);
-  
+
         a {
           display: inline-block;
-  
+
           &.inactive {
             opacity: 0.4;
             transform: rotateY(180deg);
-  
+
             &:hover {
               opacity: 1;
               transform: rotateY(0deg);
             }
           }
-  
+
           &.active {
             opacity: 1;
             transform: rotateY(0deg);
           }
-  
+
           svg.icon {
             width: 2rem;
             height: auto;
@@ -64,18 +81,11 @@
         }
       }
     }
-  
-    &.active {
+
+    // NOVO: hover no container inteiro
+    &:hover {
       .color-options {
         display: flex;
-        flex-direction: column;
-        width: 17rem;
-        border-left: var(--medium-color) 2px solid;
-        border-bottom: var(--medium-color) 2px solid;
-        border-right: var(--medium-color) 2px solid;
-        padding: 1.5rem rem;
-        background-color: var(--white);
-        gap: 1.5rem;
       }
     }
   }

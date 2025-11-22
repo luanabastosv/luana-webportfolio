@@ -29,12 +29,14 @@ function Nav() {
           <ul>
             <li>
               <a href="/" onClick={(e) => handleNavClick(e, "/")}>
-                Home
+               <p>Home</p> 
+               <img src="public/assets/images/lightning.svg" alt="" />
               </a>
             </li>
             <li>
               <a href="/about" onClick={(e) => handleNavClick(e, "/about")}>
-                About
+                <p>About</p>
+                <img src="public/assets/images/lightning.svg" alt="" />
               </a>
             </li>
             <li>
@@ -42,7 +44,8 @@ function Nav() {
                 href="/projects"
                 onClick={(e) => handleNavClick(e, "/projects")}
               >
-                <strong>Projects</strong>
+                <p>Projects</p>
+                <img src="public/assets/images/lightning.svg" alt="" />
               </a>
             </li>
           </ul>
@@ -63,19 +66,19 @@ function Nav() {
                 className="icon"
               >
                 <line
-                  x1="10.9"
-                  y1="10"
-                  x2="50.1"
-                  y2="49.2"
+                  x1="12"
+                  y1="12"
+                  x2="48"
+                  y2="48"
                   stroke="currentColor"
                   strokeWidth="4"
                   strokeLinecap="round"
                 />
                 <line
-                  x1="50.1"
-                  y1="10.8"
-                  x2="10.9"
-                  y2="50"
+                  x1="48"
+                  y1="12"
+                  x2="12"
+                  y2="48"
                   stroke="currentColor"
                   strokeWidth="4"
                   strokeLinecap="round"
@@ -89,19 +92,19 @@ function Nav() {
                 className="icon"
               >
                 <line
-                  x1="2.4"
-                  y1="29.4"
-                  x2="57.8"
-                  y2="29.4"
+                  x1="30"
+                  y1="8"
+                  x2="30"
+                  y2="52"
                   stroke="currentColor"
                   strokeWidth="4"
                   strokeLinecap="round"
                 />
                 <line
-                  x1="30.6"
-                  y1="2.3"
-                  x2="30.6"
-                  y2="57.7"
+                  x1="8"
+                  y1="30"
+                  x2="52"
+                  y2="30"
                   stroke="currentColor"
                   strokeWidth="4"
                   strokeLinecap="round"
