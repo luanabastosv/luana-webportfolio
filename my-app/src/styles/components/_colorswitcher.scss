@@ -1,11 +1,6 @@
 .color-switcher {
   .color-button {
-    display: flex;
-    position: fixed;
-    bottom: 8rem;
-    left: 5rem;
-    z-index: 999;
-    color: var(--dark-color);
+    display: none;
   }
 
   .color-options {
@@ -13,24 +8,39 @@
   }
 
   @include mq(1050px) {
+     display: flex;
+     flex-direction: column;
+    z-index: 999;
+    color: var(--dark-color);
     position: relative;
-    display: block;
-
+   
     .color-button {
       position: static;
       display: flex;
       flex-direction: row-reverse;
       justify-content: space-between;
+      gap: 1rem;
+      height: 3rem;
+      width: 15rem;
       text-transform: uppercase;
-      width: 4.5rem;
       color: var(--dark-color);
       padding: 0.8rem 1.2rem;
       margin-right: 1rem;
       cursor: pointer;
+      background-color: var(--white);
+      border: 2px solid var(--dark-color);
+
+      svg {
+        width: 20px;
+        height: auto;
+        color: var(--dark-color);
+      }
 
       p {
         font-weight: 400;
-        font-size: var(--font-xsmall);
+        font-size: var(--font-small);
+        padding: 0;
+        margin: 0;
       }
 
       &:hover {
@@ -40,19 +50,35 @@
 
     .color-options {
       display: none;
-      position: absolute;
-      top: 5rem;
-      right: 2.5rem;
-      width: 17rem;
+    }
+
+    // NOVO: hover no container inteiro
+    &.active {
+      .color-options {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+      background-color: var(--white);
+      border: 2px solid var(--dark-color);
+      top: 46px;
+      right: 1rem;
+      width: 15rem;
       padding: 1.5rem;
-      gap: 1.5rem;
-      flex-direction: column;
+      gap: 1rem;
+      justify-content: space-between;
+      
 
       div {
         display: flex;
         flex-direction: row;
+        width: 100%;
         justify-content: space-between;
-        font-size: var(--font-xsmall);
+        font-size: var(--font-small);
+
+        p {
+          font-weight: 300;
+          margin: 0
+        };
 
         a {
           display: inline-block;
@@ -80,12 +106,6 @@
           }
         }
       }
-    }
-
-    // NOVO: hover no container inteiro
-    &:hover {
-      .color-options {
-        display: flex;
       }
     }
   }

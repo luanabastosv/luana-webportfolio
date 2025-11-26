@@ -34,9 +34,11 @@
       font-family: var(--body-font);
       font-weight: 100;
       text-align: center;
-      font-size: var(--font-xsmall);
+      font-size: var(--font-supersmall);
+      
+      letter-spacing: 2px;
       .bold {
-        font-weight: 500;
+        font-weight: 900;
       }
     }
 
@@ -90,7 +92,7 @@
       p {
         color: var(--white);
         text-align: center;
-        font-size: var(--font-xsmall);
+        font-size: var(--font-supersmall);
         font-weight: 200;
         line-height: 25px;
       }
@@ -109,8 +111,9 @@
         font-family: var(--heading-font);
         font-size: var(--font-xlarge);
         margin-bottom: 3rem;
-        line-height: 37px;
+        line-height: 35px;
         font-weight: 100;
+        max-width: 20rem;
         text-transform: lowercase;
       }
 
@@ -120,7 +123,7 @@
         justify-content: center;
 
         a {
-          font-size: var(--font-small);
+          font-size: var(--font-supersmall);
           width: 70%;
           text-decoration: none;
           color: var(--dark-color);
@@ -142,47 +145,49 @@
     @include mq(1050px) {
       flex-direction: row;
       justify-content: space-between;
-      margin-bottom: 25rem;
+      align-content: center;
+      margin-bottom: 10rem;
 
       .home-content-text {
         width: 40%;
         margin: 0;
-        padding-top: 25rem;
-        padding-bottom: 25rem;
+        padding-top: 15rem;
+        padding-bottom: 15rem;
         align-content: center;
 
         p {
-          font-size: var(--font-large);
+          font-size: var(--font-small);
           text-align: left;
-          max-width: 40%;
           align-self: center;
-          line-height: 40px;
-          margin-left: 2rem;
+          line-height: 25px;
+          margin: 0;
+          padding-right: 5rem;
         }
       }
 
       .home-content-quote {
-        max-width: 40rem;
+      
         text-align: right;
         margin-left: 1rem;
 
         svg {
           margin-bottom: 2rem;
-          height: 8rem;
+          height: 6rem;
           color: var(--medium-color);
         }
 
         h2 {
-          font-size: 80px;
-          line-height: 75px;
+          font-size: 60px;
+          line-height: 55px;
+          max-width: 20rem;
         }
 
         .cta-buttons {
           align-items: flex-end;
           justify-content: flex-end;
           a {
-            width: 40%;
-            font-size: var(--font-medium);
+            width: 10rem;
+            font-size: var(--font-small);
           }
         }
       }

@@ -1,22 +1,24 @@
 footer {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: auto;
+    margin: 2rem 1rem;
     font-weight: 200;
     align-items: end;
+    font-size: var(--font-small);
+    line-height: 20px;
+    
     a {
+        
         svg {
             width: 75px;
         }
     }
     div {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 50%;
-        justify-content: space-between;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
         
         ul {
             padding-top: 2rem;
@@ -24,6 +26,17 @@ footer {
             margin: 0;
         }
     }
+
+
+    @include mq(1050px) {
+        flex-direction: row;
+    margin: 2rem 6rem;
+    
+  }
+    @include mq(1650px) {
+    margin: 2rem 13rem;
+  
+  }
 }
 
 .underline {

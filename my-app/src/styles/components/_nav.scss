@@ -1,6 +1,6 @@
 nav {
-  margin-top: 3rem;
-  z-index: 10;
+  margin-top: 6rem;
+  z-index: 20;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -120,7 +120,6 @@ nav {
 
   // DESKTOP/TABLET
   @include mq(1050px) {
-    padding-top: 3rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -128,7 +127,8 @@ nav {
     font-size: var(--font-xmedium);
     font-weight: 300;
     padding: 0;
-    margin-top: 3rem;
+    margin: 6rem ;
+    margin-bottom: 0;
     align-items: center;
     z-index: 100;
 
@@ -136,6 +136,10 @@ nav {
       display: flex;
       flex-direction: row;
       align-items: center;
+
+      .left-sec {
+        gap: 4rem;
+      }
 
       .menu-button {
         position: unset;
@@ -161,10 +165,14 @@ nav {
         margin: 0;
         align-self: center;
         a {
-          margin-left: 3rem;
-          font-family: var(--body-font);
-          &:hover {
-            color: var(--medium-color);
+          p {
+
+            margin-left: 2rem;
+            font-family: var(--body-font);
+            &:hover {
+              color: var(--medium-color);
+              text-decoration: underline;
+            }
           }
           img {
             display: none;
@@ -206,5 +214,10 @@ nav {
         }
       }
     }
+  }
+
+  @include mq(1650px) {
+    margin: 6rem 13rem;
+    margin-bottom: 0;
   }
 }

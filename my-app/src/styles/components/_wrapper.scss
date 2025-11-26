@@ -15,14 +15,24 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  // justify-content: space-between;
-  padding: 3rem 2rem;
+   .wrapper-content {
+    padding: 3rem 2rem;
 
   @include mq(550px) {
-    padding: 3rem 5rem;
+    padding: 3rem 7rem;
+  }
+  @include mq(1050px) {
+    padding: 3rem 12rem;
+  }
+  @include mq(1350px) {
+    padding: 3rem 18rem;
+  }
+   @include mq(1650px) {
+    padding: 3rem 28rem;
   }
 
-  @include mq(1050px) {
-    padding: 3rem 9rem;
-  }
+   }
+  
 }
+ 
+

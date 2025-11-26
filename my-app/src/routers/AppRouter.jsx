@@ -17,6 +17,7 @@ function AppRouter() {
       <div className="wrapper">
         <TopBar />
         <Nav />
+        <div className="wrapper-content">
 
         <Routes>
           <Route path="/" element={<PageHome />} />
@@ -24,6 +25,8 @@ function AppRouter() {
           <Route path="/projects" element={<PageProjects />} />
           <Route path="/contact" element={<PageContact />} />
         </Routes>
+        </div>
+
         <Footer />
       </div>
       <BottomBar />

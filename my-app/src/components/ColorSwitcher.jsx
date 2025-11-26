@@ -1,13 +1,14 @@
 import { useState } from "react";
+import { useTheme } from "../context/ThemeContext";
 
 function ColorSwitcher() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeTheme, setActiveTheme] = useState(null);
+  const { theme, changeTheme } = useTheme();
 
-  const handleThemeChange = (e, theme) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleThemeChange = (e, newTheme) => {
     e.preventDefault();
-    document.documentElement.setAttribute("data-theme", theme);
-    setActiveTheme(theme);
+    changeTheme(newTheme);
   };
 
   const themes = [
@@ -80,27 +81,30 @@ function ColorSwitcher() {
   return (
     <div className={`color-switcher ${isOpen ? "active" : ""}`}>
       <div className="color-button" onClick={() => setIsOpen(!isOpen)}>
-        
-          <svg
-            id="Layer_1"
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 700 698.58"
-          >
-            <path d="M700,149.41c.12-40.01-15.78-78.41-44.14-106.64-59.69-57.03-153.68-57.03-213.38,0l-107.23,107.27-35.98-35.98c-19.47-19.58-51.12-19.67-70.7-.2-19.58,19.47-19.67,51.12-.2,70.7.07.07.13.13.2.2l35.99,35.99L14.65,470.61C5.27,479.98,0,492.7,0,505.96v142.63c-.02,27.6,22.34,49.98,49.94,50h142.68c13.26,0,25.98-5.27,35.35-14.65l249.86-249.9,35.99,35.99c19.63,19.41,51.29,19.24,70.7-.4,19.26-19.48,19.26-50.83,0-70.31l-35.98-35.98,107.27-107.23c28.39-28.23,44.3-66.65,44.19-106.69ZM171.92,598.58h-71.92v-71.92l235.25-235.2,71.87,71.87-235.2,235.25Z" fill="currentColor" />
-          </svg>
-        
+        <svg
+          id="Layer_1"
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 700 698.58"
+        >
+          <path
+            d="M700,149.41c.12-40.01-15.78-78.41-44.14-106.64-59.69-57.03-153.68-57.03-213.38,0l-107.23,107.27-35.98-35.98c-19.47-19.58-51.12-19.67-70.7-.2-19.58,19.47-19.67,51.12-.2,70.7.07.07.13.13.2.2l35.99,35.99L14.65,470.61C5.27,479.98,0,492.7,0,505.96v142.63c-.02,27.6,22.34,49.98,49.94,50h142.68c13.26,0,25.98-5.27,35.35-14.65l249.86-249.9,35.99,35.99c19.63,19.41,51.29,19.24,70.7-.4,19.26-19.48,19.26-50.83,0-70.31l-35.98-35.98,107.27-107.23c28.39-28.23,44.3-66.65,44.19-106.69ZM171.92,598.58h-71.92v-71.92l235.25-235.2,71.87,71.87-235.2,235.25Z"
+            fill="currentColor"
+          />
+        </svg>
+
+        <p>Choose your vibe!</p>
       </div>
       <div className="color-options">
-        {themes.map((theme) => (
-          <div key={theme.key}>
-            <p>{theme.name}</p>
+        {themes.map((t) => (
+          <div key={t.key}>
+            <p>{t.name}</p>
             <a
               href=""
-              onClick={(e) => handleThemeChange(e, theme.key)}
-              className={activeTheme === theme.key ? "active" : "inactive"}
+              onClick={(e) => handleThemeChange(e, t.key)}
+              className={theme === t.key ? "active" : "inactive"}
             >
-              {theme.svg}
+              {t.svg}
             </a>
           </div>
         ))}
