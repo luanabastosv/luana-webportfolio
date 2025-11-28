@@ -1,0 +1,95 @@
+.single-project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  gap: 2rem;
+
+  img {
+    width: 100%;
+  }
+
+  h2 {
+    text-transform: lowercase;
+    font-weight: 200;
+    font-size: 3rem;
+    letter-spacing: -2px;
+  }
+
+  .single-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+
+    .specs {
+      
+        justify-self: left;
+        margin: 0;
+        flex: 1;
+
+      h3 {
+        font-family: var(--body-font);
+        font-weight: 200;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+      }
+      .spec-card {
+        background-color: var(--bkg-color);
+        border: var(--dark-color) 2px solid;
+        box-shadow: 4px 4px 0 var(--dark-color);
+        padding: 4rem 3rem;
+        margin: 0;
+        margin-bottom: 3rem;
+
+        div {
+          margin-bottom: 1.5rem;
+
+          p {
+            font-size: 12px;
+            line-height: 20px;
+            strong {
+              font-weight: 600;
+              font-size: 14px;
+            }
+          }
+        }
+        :last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+
+    .specs-moreinfo {
+
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      max-width: 35rem;
+
+      div {
+        h3 {
+          font-family: var(--body-font);
+          font-weight: 200;
+          text-transform: uppercase;
+          margin-bottom: 2rem;
+        }
+        p {
+            font-size: 12px;
+            line-height: 20px;
+            padding-left: 3rem;
+            padding-right: 2rem;
+            text-align: justify;
+
+            @include mq(1050px) {
+                padding-right: 0;
+            }
+        }
+      }
+    }
+  }
+}

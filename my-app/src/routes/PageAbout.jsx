@@ -1,5 +1,6 @@
 import { useTheme } from "../context/ThemeContext";
 import { useState, useEffect } from "react";
+import Spotify from "../components/Spotify";
 
 function PageAbout() {
   const { theme } = useTheme(); // pega o tema atual
@@ -90,6 +91,7 @@ function PageAbout() {
               I’ve also got a pretty eclectic taste in <button>Music</button>{" "}
               Click here to check what I'm listening now
             </p>
+            <Spotify />
 
             <p></p>
           </div>

@@ -3,28 +3,31 @@ import PageHome from "../routes/PageHome";
 import PageAbout from "../routes/PageAbout";
 import PageProjects from "../routes/PageProjects";
 import PageContact from "../routes/PageContact";
+import PageSingleProject from "../routes/PageSingleProject";
 import Nav from "../components/Nav";
 import TopBar from "../components/TopBar";
 import BottomBar from "../components/BottomBar";
 import Footer from "../components/Footer";
+import SpotifyCallback from "../routes/SpotifyCallback";
 
 import InteractiveBubble from "../components/InteractiveBubble";
 
 function AppRouter() {
   return (
     <BrowserRouter>
-        <InteractiveBubble />
+      <InteractiveBubble />
       <div className="wrapper">
         <TopBar />
         <Nav />
         <div className="wrapper-content">
-
-        <Routes>
-          <Route path="/" element={<PageHome />} />
-          <Route path="/about" element={<PageAbout />} />
-          <Route path="/projects" element={<PageProjects />} />
-          <Route path="/contact" element={<PageContact />} />
-        </Routes>
+          <Routes>
+            <Route path="/callback" element={<SpotifyCallback />} />
+            <Route path="/" element={<PageHome />} />
+            <Route path="/about" element={<PageAbout />} />
+            <Route path="/projects" element={<PageProjects />} />
+            <Route path="/contact" element={<PageContact />} />
+            <Route path="/single" element={<PageSingleProject />} />
+          </Routes>
         </div>
 
         <Footer />

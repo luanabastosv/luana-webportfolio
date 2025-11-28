@@ -1,0 +1,40 @@
+.spotify {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--white);
+    border: 2px solid var(--dark-color);
+    border-radius: 20px;
+    padding: 1.5rem 4rem;
+    gap: 2rem;
+    max-width: 50rem;
+    justify-self: center;
+
+    svg {
+        width: 3rem;
+        color: var(--dark-color);
+    }
+
+    div {
+
+        p {
+            text-transform: lowercase;
+            line-height: 20px;
+            font-size: var(--font-supersmall);
+        }
+
+        .music-title {
+            font-size: var(--font-medium);
+            font-weight: 600;
+            text-transform: initial;
+        }
+
+        .music-author {
+            margin-top: 1rem;
+            strong {
+                font-weight: 800;
+                text-transform: initial;
+                
+            }
+        }
+    }
+}
