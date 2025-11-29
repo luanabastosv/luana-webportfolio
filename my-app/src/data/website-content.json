@@ -21,15 +21,29 @@
         "text": "I’m passionate about design and technology. My work combines aesthetics and functionality to create balanced, intentional experiences."
     },
     "projects": [
-        {
-            "title": "Creative Web Portfolio",
-            "description": "A personal site built with React to showcase design and development projects.",
-            "link": "https://yourportfolio.com"
-        },
-        {
-            "title": "Photography Series",
-            "description": "Visual storytelling through light, shape, and color.",
-            "link": "https://yourportfolio.com/photography"
-        }
-    ]
+    {
+      "title": "Web Port folio",
+      "tech": "React + SAAS + API's",
+      "image": "public/assets/images/print-muvi.png",
+      "link": "https://yourportfolio.com"
+    },
+    {
+      "title": "Photography Series",
+      "tech": "Photography, Editing",
+      "image": "public/assets/images/print-photo.png",
+      "link": "https://yourportfolio.com/photography"
+    },
+    {
+      "title": "Online Store",
+      "tech": "React + Redux",
+      "image": "public/assets/images/print-store.png",
+      "link": "https://youronlinestore.com"
+    },
+    {
+      "title": "Landing Page",
+      "tech": "HTML + CSS + JS",
+      "image": "public/assets/images/print-landing.png",
+      "link": "https://yourlandingpage.com"
+    }
+  ]
 }

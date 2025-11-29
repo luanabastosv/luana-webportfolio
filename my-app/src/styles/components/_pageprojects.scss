@@ -27,26 +27,62 @@
       box-shadow: 10px 10px 0 var(--dark-color);
       height: 25rem;
       width: 60rem;
-      margin-right: -2rem;
-      padding: 1rem;
+      margin-right: -34px;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      padding-left: 1rem;    
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      cursor: pointer;
+
+      button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        width: 35px;
+        height: 35px;
+        border-radius: 30px; // deixa o fundo circular
+        background-color: var(--medium-color); // cor padrão
+        padding: 0.5rem;
+        cursor: pointer;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        margin-left: .5rem;
+
+        svg {
+          width: 30px;
+          height: 30px;
+          color: var(--white);
+          transition: color 0.3s ease;
+        }
+
+        &:hover {
+          transform: scale(1.1); // aumenta suavemente
+          background-color: var(--light-color); // fundo muda
+          svg {
+            color: var(--white); // cor do ícone muda
+          }
+        }
+      }
 
       p {
         font-size: var(--font-supersmall);
-        font-weight: 400;
+        font-weight: 600;
+        margin-left: .5rem;
+        span {
+          display: block;
+          font-weight: 300;
+        }
       }
 
       img {
         height: 16rem;
         object-fit: cover;
+        object-position: top left;
+        border-top: 2px solid var(--dark-color);
+        border-left: 2px solid var(--dark-color);
+        border-bottom: 2px solid var(--dark-color);
       }
-    }
-
-    :hover {
-      background-color: var(--light-color);
     }
   }
   .projects-inverse {

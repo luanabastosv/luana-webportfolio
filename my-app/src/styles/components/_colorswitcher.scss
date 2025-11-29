@@ -1,112 +1,119 @@
 .color-switcher {
-  .color-button {
-    display: none;
+  position: relative;
+  margin: 0;
+
+  .fab-icon {
+    background: var(--medium-color);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    color: var(--white);
+    backdrop-filter: blur(10px);
+    transition: 0.25s ease;
+
+    &:hover {
+      background: var(--light-color);
+      transform: scale(1.05);
+    }
   }
 
-  .color-options {
-    display: none;
-  }
+  .theme-list {
+    position: absolute;
+    top: 5px;
+    left: -100px;
+    transform: translateX(-50%) translateY(-10px);
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline;
+    opacity: 0;
+    gap: 1rem;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 
-  @include mq(1050px) {
-     display: flex;
-     flex-direction: column;
-    z-index: 999;
-    color: var(--dark-color);
-    position: relative;
-   
-    .color-button {
-      position: static;
+    .theme-item {
       display: flex;
-      flex-direction: row-reverse;
-      justify-content: space-between;
-      gap: 1rem;
-      height: 3rem;
-      width: 15rem;
-      text-transform: uppercase;
-      color: var(--dark-color);
-      padding: 0.8rem 1.2rem;
-      margin-right: 1rem;
+      flex-direction: row;
+      align-items: center;
+      justify-content: left;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
       cursor: pointer;
-      background-color: var(--white);
-      border: 2px solid var(--dark-color);
-
-      svg {
-        width: 20px;
-        height: auto;
-        color: var(--dark-color);
-      }
-
+      width: 10rem;
+      color: var(--dark-color);
+      gap: 15px;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: 0.25s ease;
       p {
-        font-weight: 400;
-        font-size: var(--font-small);
-        padding: 0;
-        margin: 0;
+        font-weight: 300;
       }
 
-      &:hover {
-        color: var(--medium-color);
+      .radio {
+        opacity: 0.6;
+        transition: 0.25s ease;
       }
-    }
 
-    .color-options {
-      display: none;
-    }
+      .active-radio {
+        opacity: 1;
+        transform: scale(1.15);
+      }
 
-    // NOVO: hover no container inteiro
-    &.active {
-      .color-options {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-      background-color: var(--white);
-      border: 2px solid var(--dark-color);
-      top: 46px;
-      right: 1rem;
-      width: 15rem;
-      padding: 1.5rem;
-      gap: 1rem;
-      justify-content: space-between;
-      
+      .theme-svg {
+        width: 40px;
+        height: 20px;
+      }
 
-      div {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        justify-content: space-between;
-        font-size: var(--font-small);
+      &.active {
+        background: rgba(255, 255, 255, 0.18);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
 
-        p {
-          font-weight: 300;
-          margin: 0
-        };
-
-        a {
-          display: inline-block;
-
-          &.inactive {
-            opacity: 0.4;
-            transform: rotateY(180deg);
-
-            &:hover {
-              opacity: 1;
-              transform: rotateY(0deg);
-            }
-          }
-
-          &.active {
-            opacity: 1;
-            transform: rotateY(0deg);
-          }
-
-          svg.icon {
-            width: 2rem;
-            height: auto;
-            color: var(--dark-color);
-            transition: color 0.3s ease;
-          }
+        .radio {
+          opacity: 1;
+          transform: scale(1.15);
         }
       }
+    }
+  }
+
+  &.open {
+    .theme-list {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateX(-50%) translateY(0);
+
+      .theme-item {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
   }
 }
+
+/* MOBILE */
+@media (max-width: 1050px) {
+  .color-switcher {
+    .theme-list {
+      top: -70px;
+      left: -70px;
+      transform: translateX(-50%) translateY(-10px);
+      display: flex;
+      flex-direction: row;
+
+      .theme-item {
+    width: auto;
+        margin: 0;
+        padding: 5px;
+        gap: 8px;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+  }
+}
+

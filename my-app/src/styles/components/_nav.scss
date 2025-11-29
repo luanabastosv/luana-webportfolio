@@ -1,223 +1,256 @@
+/* --------------------------------------------- */
+/* BASE NAV STRUCTURE                            */
+/* --------------------------------------------- */
+
 nav {
-  margin-top: 6rem;
-  z-index: 20;
   position: relative;
+  z-index: 20;
+
+  .desktop-only {
+    display: none;
+  }
+}
+
+/* --------------------------------------------- */
+/* MOBILE NAV — FLOATING ACTION BUTTON MENU      */
+/* --------------------------------------------- */
+
+.mobile-nav-wrapper {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 999;
+}
+
+/* Floating button */
+.mobile-fab {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+
+  background: var(--medium-color);
+  color: var(--white);
+  font-size: 2rem;
+
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
 
-  section {
-    .menu-button {
-      position: fixed;
-      bottom: 2rem;
-      left: 2rem;
-      background: var(--medium-color);
+  cursor: pointer;
+  transition: 0.25s ease;
+
+  &:hover {
+    scale: 1.08;
+    background: var(--dark-color);
+  }
+}
+
+/* Hidden menu container */
+.mobile-fab-menu {
+  position: absolute;
+  bottom: 45px;
+  left: 0;
+
+  background: var(--medium-color);
+  backdrop-filter: blur(12px);
+  padding: .7rem 1rem;
+
+  border-radius: 2rem;
+  display: flex;
+  gap: 0.7rem;
+
+  opacity: 0;
+  transform: translateY(15px);
+  pointer-events: none;
+
+  transition: 0.25s ease;
+
+  li {
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+
+    button {
+      background: none;
       border: none;
-      border-radius: 50%;
-      width: 70px;
-      height: 70px;
-      padding: 1rem;
-      cursor: pointer;
-      z-index: 200;
+      color: var(--white);
 
-      svg {
-        height: 30px;
-        margin: 0;
-        padding: 0;
-        color: var(--white);
-        align-items: center;
-        align-content: center;
-        justify-content: center;
-        align-self: center;
-        &:hover {
-          rotate: 45deg;
-        }
-      }
-    }
-
-    div {
       display: flex;
-      flex-direction: row;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
 
-      .logo-button {
-        background: none;
-        border: none;
-        padding: 0;
-        cursor: pointer;
-        z-index: 200;
-        svg {
-          height: 50px;
-          color: var(--dark-color);
-        }
-        :hover {
-          color: var(--medium-color);
-        }
+      gap: 0.3rem;
+      cursor: pointer;
+
+      opacity: 0.5;
+      transition: 0.25s ease;
+
+      img {
+        height: 15px;
+        width: 15px;
+        display: block;
       }
 
       p {
-        margin-left: 1rem;
+        font-size: 0.7rem;
         font-family: var(--body-font);
-        font-weight: 400;
-      }
-    }
-  }
-
-  ul {
-    display: none;
-  }
-
-  &.menu-open {
-    ul {
-      position: fixed;
-      bottom: 2rem;
-      left: 2rem;
-      background: var(--medium-color);
-      border: none;
-      border-radius: 2rem;
-      width: 87vw;
-      height: 70px;
-      cursor: pointer;
-      z-index: 200;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      display: flex;
-      font-size: var(--font-small);
-      z-index: 100;
-      margin: 0;
-      li {
-        a {
-          padding: 0.5rem 1rem; // padding fixo já definido aqui
-          border-radius: 1rem; // borda arredondada fixa
-          transition: background-color 0.3s ease; //
-          color: var(--bkg-color);
-          display: flex;
-          gap: 1rem;
-          flex-direction: row-reverse;
-          align-items: center;
-          color: var(--white);
-          z-index: 400;
-          p {
-            color: var(--white);
-            display: none;
-          }
-
-          &:hover {
-            background-color: var(--dark-color);
-            z-index: 400;
-            p {
-              display: flex;
-              transition: background-color 0.3s ease;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  // DESKTOP/TABLET
-  @include mq(1050px) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    letter-spacing: 0.5px;
-    font-size: var(--font-xmedium);
-    font-weight: 300;
-    padding: 0;
-    margin: 6rem ;
-    margin-bottom: 0;
-    align-items: center;
-    z-index: 100;
-
-    section {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-
-      .left-sec {
-        gap: 4rem;
-      }
-
-      .menu-button {
-        position: unset;
-        background: none;
-        border: none;
-        padding: 0;
-        cursor: pointer;
-        z-index: 200;
-
-        svg {
-          display: block;
-          height: 45px;
-          color: var(--medium-color);
-          &:hover {
-            rotate: 45deg;
-          }
-        }
-      }
-    }
-    ul {
-      li {
-        padding: 0;
+        text-transform: uppercase;
+        font-weight: 300;
+        color: var(--white);
         margin: 0;
-        align-self: center;
-        a {
-          p {
-
-            margin-left: 2rem;
-            font-family: var(--body-font);
-            &:hover {
-              color: var(--medium-color);
-              text-decoration: underline;
-            }
-          }
-          img {
-            display: none;
-          }
-        }
-        list-style: none;
       }
-      display: flex;
-      flex-direction: row;
-      color: var(--dark-color);
-      align-self: normal;
-      padding: 0;
-      margin: 0;
+
+      &.active {
+        opacity: 1;
+        transform: translateY(-3px) scale(1.12);
+        font-weight: 800;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
     }
+  }
+}
 
-    &.menu-open {
-      ul {
-        flex-direction: column;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: var(--dark-color);
-        list-style: none;
-        font-size: 10rem;
-        line-height: 8rem;
-        border-radius: 0;
-        gap: 1rem;
-        color: var(--bkg-color);
+/* When FAB is opened */
+.mobile-nav-wrapper.open .mobile-fab-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
 
-        li {
-          align-self: baseline;
-          a {
-            p {
-              color: var(--bkg-color)
-            }
-            font-family: var(--heading-font);
-          }
-        }
+/* --------------------------------------------- */
+/* MOBILE TOP HEADER                             */
+/* --------------------------------------------- */
+
+.mobile-header {
+  // position: fixed;
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  margin-bottom: 0;
+
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+
+  border-radius: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  z-index: 999;
+
+  .logo-button {
+    background: none;
+    border: none;
+    padding: 0;
+
+    cursor: pointer;
+
+    svg {
+      height: 45px;
+      width: auto;
+      color: var(--dark-color);
+
+      transition: 0.2s ease;
+
+      &:hover {
+        color: var(--light-color);
       }
     }
   }
 
-  @include mq(1650px) {
-    margin: 6rem 13rem;
+  .mobile-switcher {
+    scale: 0.9;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* --------------------------------------------- */
+/* DESKTOP NAV                                   */
+/* --------------------------------------------- */
+
+@include mq(1050px) {
+  .mobile-nav-wrapper {
+    display: none !important;
+  }
+  .mobile-header {
+    display: none !important;
+  }
+
+  nav {
+    margin: 6rem;
     margin-bottom: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .desktop-only {
+      display: flex !important;
+    }
+
+    /* Desktop Menu */
+    .desktop-menu {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+
+      li a {
+        text-decoration: none;
+        color: var(--white);
+        font-size: var(--font-medium);
+        transition: 0.2s ease;
+
+        p {
+          margin-left: 1rem;
+        }
+
+        &:hover {
+          color: var(--medium-color);
+        }
+
+        &.active p {
+          text-decoration: underline;
+          color: var(--medium-color);
+        }
+      }
+    }
+
+    .logo-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--dark-color);
+
+      svg {
+        height: 50px;
+        color: var(--dark-color);
+
+        &:hover {
+          color: var(--medium-color);
+        }
+      }
+    }
+  }
+}
+
+/* --------------------------------------------- */
+/* EXTRA LARGE DESKTOP                           */
+/* --------------------------------------------- */
+
+@include mq(1650px) {
+  nav {
+    margin: 6rem 13rem;
   }
 }

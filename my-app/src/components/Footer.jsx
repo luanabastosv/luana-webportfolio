@@ -3,34 +3,33 @@ function Footer() {
     <footer>
       <div>
         <ul>
-          <li>
-            <a href="#">Github</a>
-          </li>
-          <li>
-            <a href="#">Linkedin</a>
-          </li>
-          <li>
-            <a href="#">Behance</a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a
-              href="/contact"
-              onClick={(e) => handleNavClick(e, "/contact")}
-              className="underline"
-            >
-              To Get in touch
-            </a>
+          <li className="underline">
+            Socials:
           </li>
           <li>&nbsp;</li>
           <li>
-            <a href="#">Email</a>
+            <a href="https://github.com/luanabastosv">Github</a>
+          </li>
+          <li>
+            <a href="http://www.linkedin.com/in/luanabastosv">Linkedin</a>
+          </li>
+         
+        </ul>
+        <ul>
+          <li className="underline">
+            To get in touch:
+          </li>
+          <li>&nbsp;</li>
+          <li>
+            <a href="mailto:contact@lubastos.com">Email</a>
+          </li>
+          <li>
+            <a href="tel:+55 85 99787-8686">+55 85 99787-8686</a>
           </li>
         </ul>
         <ul>
-          <li>
-            <span className="underline">Located at</span>
+          <li className="underline">
+            Located at:
           </li>
           <li>&nbsp;</li>
           <li>British Columbia, Canada</li>

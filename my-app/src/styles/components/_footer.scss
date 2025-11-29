@@ -1,44 +1,60 @@
 footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 2rem 1rem;
-    font-weight: 200;
-    align-items: end;
-    font-size: var(--font-small);
-    line-height: 20px;
-    
-    a {
-        
-        svg {
-            width: 75px;
-        }
-    }
-    div {
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-        padding: 0;
-        
-        ul {
-            padding-top: 2rem;
-            padding-bottom: 0;
-            margin: 0;
-        }
-    }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 4rem 3rem;
+  padding: 0;
+  font-weight: 200;
+  align-items: end;
+  font-size: var(--font-small);
+  line-height: 20px;
 
-
-    @include mq(1050px) {
-        flex-direction: row;
-    margin: 2rem 6rem;
-    
+  a {
+    transition: 0.25s ease;
+    svg {
+      width: 65px;
+    }
+    :hover {
+        color: var(--medium-color);
+        
+    }
   }
-    @include mq(1650px) {
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
+    margin: 0;
+    padding: 0;
+
+    ul {
+      padding-top: 2rem;
+      padding-bottom: 0;
+      padding: 0;
+      margin: 0;
+      li {
+        :hover {
+            text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  @include mq(1050px) {
+    flex-direction: row;
+    margin: 2rem 6rem;
+    div {
+        flex-direction: row;
+    }
+  }
+  @include mq(1650px) {
     margin: 2rem 13rem;
-  
   }
 }
 
 .underline {
-    text-decoration: underline;
+  text-decoration: underline;
+  font-weight: 400;
+  line-height: 10px;
 }
