@@ -1,4 +1,5 @@
 import data from "../data/website-content.json";
+import { Link } from "react-router-dom";
 
 function PageHome() {
   const home = data.homepage;
@@ -170,15 +171,8 @@ function PageHome() {
 
             <h2>{home.secsubheading}</h2>
             <div className="cta-buttons">
-              <a
-                href="/projects"
-                onClick={(e) => handleNavClick(e, "/projects")}
-              >
-                {home.buttons.first}
-              </a>
-              <a href="/about" onClick={(e) => handleNavClick(e, "/about")}>
-                {home.buttons.second}
-              </a>
+              <Link to="/projects">{home.buttons.first}</Link>
+              <Link to="/about">{home.buttons.second}</Link>
             </div>
           </div>
         </div>

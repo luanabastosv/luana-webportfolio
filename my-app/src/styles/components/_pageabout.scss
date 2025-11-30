@@ -109,7 +109,7 @@
   }
 
   article {
-    margin: 4rem 0rem;
+    margin: 1rem 0rem;
     gap: 2rem;
     justify-self: center;
     display: flex;
@@ -156,10 +156,11 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-    color: var(--dark-color);
-    img {
+    
+    svg {
       width: 10rem;
       height: auto;
+      color: var(--dark-color);
     }
   }
 

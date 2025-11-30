@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PageHome from "../routes/PageHome";
 import PageAbout from "../routes/PageAbout";
 import PageProjects from "../routes/PageProjects";
-import PageContact from "../routes/PageContact";
 import PageSingleProject from "../routes/PageSingleProject";
 import Nav from "../components/Nav";
 import TopBar from "../components/TopBar";
@@ -25,8 +24,8 @@ function AppRouter() {
             <Route path="/" element={<PageHome />} />
             <Route path="/about" element={<PageAbout />} />
             <Route path="/projects" element={<PageProjects />} />
-            <Route path="/contact" element={<PageContact />} />
-            <Route path="/single" element={<PageSingleProject />} />
+            <Route path="/projects/:id" element={<PageSingleProject />} />
+
           </Routes>
         </div>
 

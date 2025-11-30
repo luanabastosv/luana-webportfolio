@@ -1,59 +1,78 @@
+import { useParams } from "react-router-dom";
+import projectsData from "../data/website-content.json";
+
 function PageSingleProject() {
+  const { id } = useParams(); // pega o número vindo da URL
+  const project = projectsData.projects[id]; // pega o projeto correspondente
+
+  if (!project) {
+    return <p>Project not found.</p>;
+  }
+
   return (
     <section className="single-project">
-      <img src="/public/assets/images/print-muvi.png" alt="" />
-      <h2>This Porfolio</h2>
+      <div className="image">
+        <img src={`/${project.image}`} alt={project.title} />
+        <button>
+          <a href="https://lubastos.com/muvi/#/">Live Site</a>
+        </button>
+      </div>
+
+      <h2>{project.title}</h2>
+
       <div className="single-content">
+        {/* LEFT COLUMN */}
         <div className="specs">
-          <h3>Project Specifications</h3>
+          <h3>
+            &#123; Project <strong>Specifications</strong> &#125;
+          </h3>
 
           <div className="spec-card">
             <div>
-              <p> Tech Used (Development):</p>
+              <p>Tech Used (Development):</p>
               <p>
-                {" "}
-                <strong>Headless CMS + React</strong>
+                <strong>{project.tech}</strong>
               </p>
             </div>
+
             <div>
-              <p> Tech Used (UI/UX):</p>
+              <p>Tech Used (UI/UX):</p>
               <p>
-                <strong>Figma + Illustrator</strong>{" "}
-              </p>
+                <strong>
+                  <strong>{project.uiux}</strong>
+                </strong>
+              </p>{" "}
+              {/* você não tem esse campo no JSON */}
             </div>
+
             <div>
+              <p>By:</p>
               <p>
-                By: <strong> Luana Bastos</strong>
+                <strong>Luana Bastos</strong>
               </p>
             </div>
           </div>
         </div>
 
+        {/* RIGHT COLUMN */}
         <div className="specs-moreinfo">
           <div>
-            <h3>Project Overview</h3>
-
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos
-              facere iste est hic obcaecati! Reprehenderit aliquam doloremque
-              officia, quis eveniet fugiat commodi harum consequatur ea laborum
-              modi earum quibusdam dolor?
-            </p>
+            <h3>
+              &#123; Project <strong>Overview</strong> &#125;
+            </h3>
+            {project.overview.map((p, i) => (
+              <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
+            ))}
           </div>
+
           <div>
-            <h3>What I've Learned</h3>
+            <h3>
+              &#123; What I've <strong>Learned</strong> &#125;
+            </h3>
             <div>
-              <div>
-                <p>Tech Used (Development):</p>
-                <p>Headless CMS + React</p>
-              </div>
-              <div>
-                <p>Tech Used (UI/UX):</p>
-                <p>Headless CMS + React</p>
-              </div>
-              <div>
-                <p>By: Luana Bastos</p>
-              </div>
+              {project.learned.map((p, i) => (
+                <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
+              ))}
             </div>
           </div>
         </div>

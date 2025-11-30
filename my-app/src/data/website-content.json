@@ -1,49 +1,93 @@
 {
-    "topbar": {
-        "content": "&lt;&nbsp;&nbsp;&nbsp;creating digital experiences with <strong>creativity, flow, and a touch of adventure.</strong>&nbsp;&nbsp;&gt;"
-    },
-    "homepage": {
-        "title": "Lu.<span>Bastos</span>",
-        "subheading": "&#123;&nbsp;&nbsp;&nbsp;&nbsp;Front-End <strong>Web Developer</strong> and <strong>UI/UX Designer</strong>&nbsp;&nbsp;&nbsp;&nbsp;&#125;",
-        "description": [
-            "Fueled by creativity and curiosity, I bring <strong> energy, organization, and intention </strong> to everything I build.",
-            "&nbsp;",
-            "Whether it's crafting digital experiences or chasing waves, I'm all about flow and meaningful connection."
-        ],
-        "secsubheading": "Here is where creativity meets code.",
-        "buttons": {
-            "first": "See my projects",
-            "second": "Know me"
-        }
-    },
-    "about": {
-        "heading": "About Me",
-        "text": "I’m passionate about design and technology. My work combines aesthetics and functionality to create balanced, intentional experiences."
-    },
-    "projects": [
+  "topbar": {
+    "content": "&lt;&nbsp;&nbsp;&nbsp;creating digital experiences with <strong>creativity, flow, and a touch of adventure.</strong>&nbsp;&nbsp;&gt;"
+  },
+  "homepage": {
+    "title": "Lu.<span>Bastos</span>",
+    "subheading": "&#123;&nbsp;&nbsp;&nbsp;&nbsp;Front-End <strong>Web Developer</strong> and <strong>UI/UX Designer</strong>&nbsp;&nbsp;&nbsp;&nbsp;&#125;",
+    "description": [
+      "Fueled by creativity and curiosity, I bring <strong> energy, organization, and intention </strong> to everything I build.",
+      "&nbsp;",
+      "Whether it's crafting digital experiences or chasing waves, I'm all about flow and meaningful connection."
+    ],
+    "secsubheading": "Here is where creativity meets code.",
+    "buttons": {
+      "first": "See my projects",
+      "second": "Know me"
+    }
+  },
+  "about": {
+    "heading": "About Me",
+    "text": "I’m passionate about design and technology. My work combines aesthetics and functionality to create balanced, intentional experiences."
+  },
+  "projects": [
     {
       "title": "Web Port folio",
       "tech": "React + SAAS + API's",
+      "uiux": "Figma + Adobe Illustrator",
+      "image": "public/assets/images/print-portfolio.png",
+      "link": "https://lubastos.com/",
+      "overview": [
+        "This portfolio was engineered with <strong>React</strong>, structured to deliver a performant and scalable interface showcasing my work and technical capabilities.",
+        "The entire layout and user flow were first planned in <strong>Figma</strong> and refined in <strong>Adobe Illustrator</strong>, ensuring consistent visual guidelines and a clear component hierarchy. Styling was implemented using SAAS to maintain modularity and maintainable architecture.",
+        "The project focuses on <strong>efficient component composition, optimized rendering, and integration with external data sources</strong>, resulting in a responsive and easily extensible codebase."
+      ],
+      "learned": [
+        "React Process",
+        "Spotify API",
+        "CSS and SVG Animations"
+      ]
+    },
+    {
+      "title": "Movie Data Base",
+      "tech": "React + SAAS + API's",
+      "uiux": "Adobe XD + Adobe Illustrator",
       "image": "public/assets/images/print-muvi.png",
-      "link": "https://yourportfolio.com"
+      "link": "https://lubastos.com/muvi",
+      "overview": [
+        "This project was built using React with the goal of creating a movie database connected to the <strong>TMDB (The Movie Database) API.</strong>",
+        "Before development, I designed the entire <strong>prototype in Adobe XD</strong>, studying and planning the application from its initial concept stage. The interface allows users to explore popular movies, search for titles, and view detailed information fetched from the API. The design was styled with SCSS, ensuring a clean, responsive, and visually consistent layout.",
+        "The project focuses on <strong>clean architecture, efficient API integration, and delivering a smooth browsing experience.</strong>"
+      ],
+      "learned": [
+        "React Process",
+        "Fetching API's",
+        " Filtering"
+      ]
     },
     {
-      "title": "Photography Series",
-      "tech": "Photography, Editing",
-      "image": "public/assets/images/print-photo.png",
-      "link": "https://yourportfolio.com/photography"
+      "title": "Online Store, NL",
+      "tech": "Shopify",
+      "uiux": "Adobe Illustrator + Adobe Photoshop",
+      "image": "public/assets/images/print-nl.png",
+      "link": "https://natallumen.com",
+      "overview": [
+        "This project was developed on <strong>Shopify</strong> to support a real charity event in Fortaleza, Brazil, providing a fully functional online store for selling physical products.",
+        "The visual identity and promotional assets were crafted using <strong>Adobe Illustrator</strong> and <strong>Adobe Photoshop</strong>, ensuring brand consistency across the storefront and marketing materials. The store structure was configured with custom sections, optimized product pages, and streamlined checkout settings.",
+        "The focus of the project was on <strong>scalable store configuration, efficient CMS usage, optimized product management, and reliable order handling</strong> to support a smooth purchasing experience during the event."
+      ],
+      "learned": [
+        "Online Stores",
+        "Store Email Marketing",
+        "CMS Process"
+      ]
     },
     {
-      "title": "Online Store",
-      "tech": "React + Redux",
-      "image": "public/assets/images/print-store.png",
-      "link": "https://youronlinestore.com"
-    },
-    {
-      "title": "Landing Page",
-      "tech": "HTML + CSS + JS",
-      "image": "public/assets/images/print-landing.png",
-      "link": "https://yourlandingpage.com"
+      "title": "Way Finder, Tours",
+      "tech": "Wordpress",
+      "uiux": "Figma + Adobe Illustrator",
+      "image": "public/assets/images/print-wayfinder.png",
+      "link": "https://wayfinderatacama.bcitwebdeveloper.ca/",
+      "overview": [
+        "This project was built using <strong>WordPress</strong> to create a fully customizable tour showcase platform for a travel-focused business.",
+        "All page layouts and user flows were planned in <strong>Figma</strong> and refined in <strong>Adobe Illustrator</strong>, ensuring a cohesive visual identity and clear information hierarchy throughout the site. Custom templates and WordPress blocks were implemented to support dynamic content management.",
+        "The project emphasizes <strong>CMS flexibility, optimized page structure, SEO-friendly configuration, and scalable content organization</strong> tailored for a tourism-driven experience."
+      ],
+      "learned": [
+        "Online Stores",
+        "Store Email Marketing",
+        "CMS Process"
+      ]
     }
   ]
 }
