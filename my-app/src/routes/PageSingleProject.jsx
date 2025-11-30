@@ -12,7 +12,7 @@ function PageSingleProject() {
   return (
     <section className="single-project">
       <div className="image">
-        <img src={`/${project.image}`} alt={project.title} />
+        <img src={`${project.image}`} alt={project.title} />
         <a
           href={project.link}
           target="_blank"
