@@ -2,8 +2,8 @@ import { useParams } from "react-router-dom";
 import projectsData from "../data/website-content.json";
 
 function PageSingleProject() {
-  const { id } = useParams(); // pega o número vindo da URL
-  const project = projectsData.projects[id]; // pega o projeto correspondente
+  const { id } = useParams();
+  const project = projectsData.projects[id];
 
   if (!project) {
     return <p>Project not found.</p>;
@@ -13,9 +13,13 @@ function PageSingleProject() {
     <section className="single-project">
       <div className="image">
         <img src={`/${project.image}`} alt={project.title} />
-        <button>
-          <a href="https://lubastos.com/muvi/#/">Live Site</a>
-        </button>
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Live Site
+        </a>
       </div>
 
       <h2>{project.title}</h2>
@@ -41,8 +45,7 @@ function PageSingleProject() {
                 <strong>
                   <strong>{project.uiux}</strong>
                 </strong>
-              </p>{" "}
-              {/* você não tem esse campo no JSON */}
+              </p>
             </div>
 
             <div>

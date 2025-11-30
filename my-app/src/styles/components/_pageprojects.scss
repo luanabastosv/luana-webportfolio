@@ -44,8 +44,8 @@
         border: none;
         width: 35px;
         height: 35px;
-        border-radius: 30px; // deixa o fundo circular
-        background-color: var(--medium-color); // cor padrão
+        border-radius: 30px; 
+        background-color: var(--medium-color); 
         padding: 0.5rem;
         cursor: pointer;
         transition: transform 0.3s ease, background-color 0.3s ease;
@@ -58,10 +58,10 @@
         }
 
         &:hover {
-          transform: scale(1.1); // aumenta suavemente
-          background-color: var(--light-color); // fundo muda
+          transform: scale(1.1); 
+          background-color: var(--light-color); 
           svg {
-            color: var(--white); // cor do ícone muda
+            color: var(--white); 
           }
         }
       }

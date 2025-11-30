@@ -1,6 +1,7 @@
 .page-about {
   .hero-about {
     margin-top: 5rem;
+    margin-bottom: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -167,7 +168,7 @@
   .skills,
   .previous-experiences,
   .education {
-    margin: 8rem 0rem;
+    margin: 7rem 0rem;
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -201,6 +202,9 @@
       margin-top: 1rem;
       padding: 0rem 2.5rem;
       letter-spacing: 1.5px;
+      strong {
+        font-weight: 700;
+      }
     }
   }
 
@@ -307,7 +311,7 @@
   .page-about {
     .hero-about {
       margin-top: 12rem;
-      margin-bottom: 14rem;
+      margin-bottom: 6rem;
       div {
         h1 {
           top: -8.3rem;

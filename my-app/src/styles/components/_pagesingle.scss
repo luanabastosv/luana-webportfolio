@@ -20,7 +20,7 @@
       position: relative;
       border: 5px solid var(--dark-color);
     }
-    button {
+    a {
       bottom: 1.5rem;
       left: 1.5rem;
       font-size: var(--font-little);
@@ -37,8 +37,9 @@
       position: absolute;
       cursor: pointer;
 
-      :hover {
-        background-color: var(--light-color);
+      &:hover {
+        background-color: var(--medium-color);
+        color: var(--white);
       }
     }
   }

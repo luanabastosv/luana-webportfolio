@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 function SpotifyCallback() {
   useEffect(() => {
-    // Os dados vêm na hash: #access_token=...
+   
     const hash = window.location.hash;
     const params = new URLSearchParams(hash.replace("#", ""));
 
@@ -10,7 +10,7 @@ function SpotifyCallback() {
 
     if (accessToken) {
       localStorage.setItem("spotify_token", accessToken);
-      window.location.href = "/"; // redirecionar de volta ao site
+      window.location.href = "/"; 
     } else {
       console.error("No token found.");
     }

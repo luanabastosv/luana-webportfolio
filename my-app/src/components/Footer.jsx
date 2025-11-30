@@ -3,9 +3,7 @@ function Footer() {
     <footer>
       <div>
         <ul>
-          <li className="underline">
-            Socials:
-          </li>
+          <li className="underline"><strong>Socials:</strong></li>
           <li>&nbsp;</li>
           <li>
             <a href="https://github.com/luanabastosv">Github</a>
@@ -13,12 +11,9 @@ function Footer() {
           <li>
             <a href="http://www.linkedin.com/in/luanabastosv">Linkedin</a>
           </li>
-         
         </ul>
         <ul>
-          <li className="underline">
-            To get in touch:
-          </li>
+          <li className="underline"><strong>To get in touch:</strong></li>
           <li>&nbsp;</li>
           <li>
             <a href="mailto:contact@lubastos.com">Email</a>
@@ -28,9 +23,7 @@ function Footer() {
           </li>
         </ul>
         <ul>
-          <li className="underline">
-            Located at:
-          </li>
+          <li className="underline"><strong>Located at:</strong></li>
           <li>&nbsp;</li>
           <li>British Columbia, Canada</li>
           <li>Fortaleza, Brazil</li>

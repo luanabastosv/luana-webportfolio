@@ -3,9 +3,8 @@ import { useState, useEffect } from "react";
 import Spotify from "../components/Spotify";
 
 function PageAbout() {
-  const { theme } = useTheme(); // pega o tema atual
+  const { theme } = useTheme();
 
-  // 4 fotos por tema
   const photos = [
     `/assets/images/luana-photo-1-${theme}.png`,
     `/assets/images/luana-photo-2-${theme}.png`,
@@ -283,27 +282,27 @@ function PageAbout() {
           <div>
             <ul>
               <li>HTML</li>
-              <li>HTML</li>
-              <li>HTML</li>
-              <li>HTML</li>
+              <li>CSS</li>
+              <li>Javascritp</li>
+              <li>React</li>
             </ul>
             <ul>
-              <li>HTML</li>
-              <li>HTML</li>
-              <li>HTML</li>
-              <li>HTML</li>
+              <li>SAAS</li>
+              <li>Tailwind</li>
+              <li>PHP</li>
+              <li>Figma</li>
             </ul>
             <ul>
-              <li>HTML</li>
-              <li>HTML</li>
-              <li>HTML</li>
-              <li>HTML</li>
+              <li>Wordpress</li>
+              <li>Shopify</li>
+              <li>VS Code</li>
+              <li>Premiere</li>
             </ul>
             <ul>
-              <li>HTML</li>
-              <li>HTML</li>
-              <li>HTML</li>
-              <li>HTML</li>
+              <li>XD</li>
+              <li>Illustrator</li>
+              <li>Photoshop</li>
+              <li>Lightroom</li>
             </ul>
           </div>
         </div>
@@ -311,9 +310,10 @@ function PageAbout() {
         <div className="previous-experiences">
           <h2>Previous Experiences</h2>
           <p>
-            Experienced in building React apps, static websites (HTML/CSS), and
-            CMS platforms like WordPress and Shopify. Strong background in Figma
-            prototyping and the full Adobe Creative Suite.
+            Previous experiences across architecture, design, and photography
+            have strengthened my aesthetic sense, allowed me to gain a broad
+            understanding of different design fields, and gave me solid
+            experience leading project teams.
           </p>
           <div>
             <div>
@@ -327,17 +327,17 @@ function PageAbout() {
             <div>
               <h3>Designer</h3>
               <ul>
-                <li>5y as Architect and Interior Designer</li>
-                <li>Team leading</li>
-                <li>Project Management</li>
+                <li>Brand Designs (Events and Companies)</li>
+                <li>Social Media Ads</li>
+                <li>Print Designer</li>
               </ul>
             </div>
             <div>
               <h3>Photographer</h3>
               <ul>
-                <li>5y as Architect and Interior Designer</li>
-                <li>Team leading</li>
-                <li>Project Management</li>
+                <li>Family Photography</li>
+                <li>Wedding Photography</li>
+                <li>Events/Concerts</li>
               </ul>
             </div>
           </div>
@@ -346,17 +346,21 @@ function PageAbout() {
         <div className="education">
           <h2>Education // Languages</h2>
           <p>
-            Experienced in building React apps, static websites (HTML/CSS), and
-            CMS platforms like WordPress and Shopify. Strong background in Figma
-            prototyping and the full Adobe Creative Suite.
+            A solid academic foundation and a multilingual background support my
+            work in tech and design, allowing me to collaborate effectively and
+            bring clarity to every project.
           </p>
           <div>
             <div>
-              <p>British Columbia Institute of Technology (BCIT)</p>
+              <p>
+                <strong>British Columbia Institute of Technology</strong> (BCIT)
+              </p>
               <p>Universidade de Fortaleza (UNIFOR)</p>
             </div>
             <div>
-              <p>English | Portuguese | Spanish</p>
+              <p>
+                <strong>English | Portuguese | Spanish</strong>
+              </p>
             </div>
           </div>
         </div>

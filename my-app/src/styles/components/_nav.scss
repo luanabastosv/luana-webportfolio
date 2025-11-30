@@ -218,6 +218,7 @@ nav {
 
         &:hover {
           color: var(--medium-color);
+          text-decoration: underline;
         }
 
         &.active p {
