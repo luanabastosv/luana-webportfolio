@@ -101,7 +101,7 @@ function Nav() {
                 className={active === "home" ? "active" : ""}
                 onClick={(e) => handleNavClick(e, "/", "home")}
               >
-                <img src="public/assets/images/home-icon.svg" alt="Home" />
+                <img src="/assets/images/home-icon.svg" alt="Home" />
                 <p>Home</p>
               </button>
             </li>
@@ -111,7 +111,7 @@ function Nav() {
                 className={active === "about" ? "active" : ""}
                 onClick={(e) => handleNavClick(e, "/about", "about")}
               >
-                <img src="public/assets/images/about-icon.svg" alt="About" />
+                <img src="/assets/images/about-icon.svg" alt="About" />
                 <p>About</p>
               </button>
             </li>
@@ -122,7 +122,7 @@ function Nav() {
                 onClick={(e) => handleNavClick(e, "/projects", "projects")}
               >
                 <img
-                  src="public/assets/images/projects-icon.svg"
+                  src="/assets/images/projects-icon.svg"
                   alt="Projects"
                 />
                 <p>Projects</p>

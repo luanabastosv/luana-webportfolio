@@ -25,7 +25,7 @@
       "title": "Web Port folio",
       "tech": "React + SAAS + API's",
       "uiux": "Figma + Adobe Illustrator",
-      "image": "public/assets/images/print-portfolio.png",
+      "image": "/assets/images/print-portfolio.png",
       "link": "https://lubastos.com/",
       "overview": [
         "This portfolio was engineered with <strong>React</strong>, structured to deliver a performant and scalable interface showcasing my work and technical capabilities.",
@@ -42,7 +42,7 @@
       "title": "Movie Data Base",
       "tech": "React + SAAS + API's",
       "uiux": "Adobe XD + Adobe Illustrator",
-      "image": "public/assets/images/print-muvi.png",
+      "image": "/assets/images/print-muvi.png",
       "link": "https://lubastos.com/muvi",
       "overview": [
         "This project was built using React with the goal of creating a movie database connected to the <strong>TMDB (The Movie Database) API.</strong>",
@@ -59,7 +59,7 @@
       "title": "Online Store, NL",
       "tech": "Shopify",
       "uiux": "Adobe Illustrator + Adobe Photoshop",
-      "image": "public/assets/images/print-nl.png",
+      "image": "/assets/images/print-nl.png",
       "link": "https://natallumen.com",
       "overview": [
         "This project was developed on <strong>Shopify</strong> to support a real charity event in Fortaleza, Brazil, providing a fully functional online store for selling physical products.",
@@ -76,7 +76,7 @@
       "title": "Way Finder, Tours",
       "tech": "Wordpress",
       "uiux": "Figma + Adobe Illustrator",
-      "image": "public/assets/images/print-wayfinder.png",
+      "image": "/assets/images/print-wayfinder.png",
       "link": "https://wayfinderatacama.bcitwebdeveloper.ca/",
       "overview": [
         "This project was built using <strong>WordPress</strong> to create a fully customizable tour showcase platform for a travel-focused business.",
