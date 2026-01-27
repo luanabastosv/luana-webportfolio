@@ -1,10 +1,90 @@
 import data from "../data/website-content.json";
 import { Link } from "react-router-dom";
+import { useEffect, useRef } from "react";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function PageHome() {
   const home = data.homepage;
+  const pageRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      /* ================= HERO ================= */
+
+      // estado inicial seguro
+      gsap.set(".hero svg", { opacity: 1, y: 0 });
+      gsap.set(".hero p", { opacity: 1, y: 0 });
+
+      // animação de entrada
+      gsap.fromTo(
+        ".hero svg",
+        { autoAlpha: 0, y: 60 },
+        {
+          autoAlpha: (i, el) => (el.classList.contains("transp") ? 0.25 : 1),
+          y: 0,
+          stagger: 0.15,
+          duration: 1,
+          ease: "power3.out",
+        }
+      );
+
+      gsap.fromTo(
+        ".hero p",
+        { opacity: 0, y: 20 },
+        {
+          opacity: 1,
+          y: 0,
+          delay: 0.6,
+          duration: 0.8,
+          ease: "power3.out",
+        }
+      );
+      
+      
+
+      /* ================= TEXTO ================= */
+      gsap.fromTo(
+        ".home-content-text p",
+        { opacity: 0, y: 40 },
+        {
+          scrollTrigger: {
+            trigger: ".home-content-text",
+            start: "top 80%",
+          },
+          opacity: 1,
+          y: 0,
+          stagger: 0.15,
+          duration: 0.8,
+          ease: "power3.out",
+        }
+      );
+
+      /* ================= QUOTE ================= */
+      gsap.fromTo(
+        ".home-content-quote",
+        { opacity: 0, scale: 0.95 },
+        {
+          scrollTrigger: {
+            trigger: ".home-content-quote",
+            start: "top 85%",
+          },
+          opacity: 1,
+          scale: 1,
+          duration: 0.8,
+          ease: "power3.out",
+        }
+      );
+    }, pageRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <main>
+    <main ref={pageRef}>
       <section className="page-home">
         <div className="hero">
           <div className="hero-text">
@@ -148,6 +228,7 @@ function PageHome() {
               </g>
             </svg>
           </div>
+
           <p dangerouslySetInnerHTML={{ __html: home.subheading }} />
         </div>
 
@@ -157,6 +238,7 @@ function PageHome() {
               <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
             ))}
           </div>
+
           <div className="home-content-quote">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -170,6 +252,7 @@ function PageHome() {
             </svg>
 
             <h2>{home.secsubheading}</h2>
+
             <div className="cta-buttons">
               <Link to="/projects">{home.buttons.first}</Link>
               <Link to="/about">{home.buttons.second}</Link>

@@ -7,16 +7,21 @@ import PageProposals from "../routes/PageProposals";
 import Nav from "../components/Nav";
 import TopBar from "../components/TopBar";
 import Footer from "../components/Footer";
+import ScrollToTop from "../components/ScrollToTop";
 
 import InteractiveBubble from "../components/InteractiveBubble";
 
 function AppRouter() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
+
       <InteractiveBubble />
+
       <div className="wrapper">
         <TopBar />
         <Nav />
+
         <div className="wrapper-content">
           <Routes>
             <Route path="/" element={<PageHome />} />
@@ -24,13 +29,11 @@ function AppRouter() {
             <Route path="/projects" element={<PageProjects />} />
             <Route path="/propostas/:id" element={<PageProposals />} />
             <Route path="/projects/:id" element={<PageSingleProject />} />
-
           </Routes>
         </div>
 
         <Footer />
       </div>
-     
     </BrowserRouter>
   );
 }
