@@ -26,7 +26,7 @@ nav {
 .mobile-fab {
   width: 45px;
   height: 45px;
-  border-radius: 50%;
+  border-radius: 45px;
   border: none;
 
   background: var(--medium-color);
@@ -44,6 +44,14 @@ nav {
     scale: 1.08;
     background: var(--dark-color);
   }
+}
+
+.mobile-fab .icon {
+  transition: transform 0.25s ease;
+}
+
+.mobile-fab:active .icon {
+  transform: scale(0.9);
 }
 
 /* Hidden menu container */

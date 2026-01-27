@@ -3,6 +3,7 @@ import PageHome from "../routes/PageHome";
 import PageAbout from "../routes/PageAbout";
 import PageProjects from "../routes/PageProjects";
 import PageSingleProject from "../routes/PageSingleProject";
+import PageProposals from "../routes/PageProposals";
 import Nav from "../components/Nav";
 import TopBar from "../components/TopBar";
 import Footer from "../components/Footer";
@@ -21,6 +22,7 @@ function AppRouter() {
             <Route path="/" element={<PageHome />} />
             <Route path="/about" element={<PageAbout />} />
             <Route path="/projects" element={<PageProjects />} />
+            <Route path="/propostas/:id" element={<PageProposals />} />
             <Route path="/projects/:id" element={<PageSingleProject />} />
 
           </Routes>

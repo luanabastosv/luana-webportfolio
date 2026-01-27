@@ -89,5 +89,76 @@
         "CMS Process"
       ]
     }
+  ],
+  "propostas": [
+    {
+      "title": "&#123;&nbsp;&nbsp;&nbsp;&nbsp; Web Design and Development&nbsp;&nbsp;&nbsp;&nbsp;&#125;",
+      "project": "Site Studio Chao",
+      "client": "Neuza e Luana",
+      "date": "Janeiro/ 2026",
+      "fase1": "Etapa: <strong>Web Design</strong>",
+      "content1": [
+        "Criação de <strong>mockups de interface (UI/UX)</strong> para aprovação",
+        "Desenvolvimento de <strong>layout</strong> (FIGMA)",
+        "<strong>Definição de:</strong> <br><br>Estrutura das páginas <strong>*</strong> Hierarquia visual <strong>*</strong> Tipografia e Paleta de cores <strong>(de acordo com branding existente)</strong>",
+        "<strong>Páginas:</strong> <br><br>Home <strong>*</strong> Quem Somos <strong>*</strong> Nossos Projetos <strong>*</strong> Projeto Individual"
+      ],
+      "custo1": "R$ 1350,00",
+      "duracao1": "5 a 10 dias úteis",
+      "fase2": "Etapa: <strong>Web Development</strong>",
+      "content2": [
+        "Implementação do layout aprovado em WordPress",
+        "Desenvolvimento responsivo (desktop, tablet e mobile)",
+        "Configuração de: Tema | Plugins essenciais | Estrutura de páginas",
+        "Otimização básica de performance",
+        "SEO básico (estrutura, títulos, URLs amigáveis)"
+      ],
+      "custo2": "R$ 2280,00",
+      "duracao2": "10 a 15 dias úteis",
+      "notincluded": [
+        "Criação de textos (copywriting)",
+        "Criação de identidade visual e logotipo",
+        "Hospedagem e domínio",
+        "Manutenção contínua",
+        "Funcionalidades fora do escopo aprovado"
+      ],
+      "totalsd": "R$ 3650,00",
+      "total": "R$ 3200,00",
+      "payment": "*entrada de 50% + 2X de r$ 800,00"
+    },
+    {
+      "project": "Site Studio Chao",
+      "client": "Neuza e Luana",
+      "date": "Janeiro/2026",
+      "fase1": "Web Design",
+      "content1": [
+        "Criação de mockups de interface (UI/UX) para aprovação",
+        "Desenvolvimento de layout (FIGMA)",
+        "Definição de: Estrutura das páginas | Hierarquia visual | Tipografia (de acordo com branding existente) | Paleta de cores (de acordo com branding existente)",
+        "Páginas: Home | Quem Somos | Nossos Projetos | Projeto Individual"
+      ],
+      "custo1": "R$ 1350,00",
+      "duracao1": "5 a 10 dias úteis",
+      "fase2": "Web Development",
+      "content2": [
+        "Implementação do layout aprovado em WordPress",
+        "Desenvolvimento responsivo (desktop, tablet e mobile)",
+        "Configuração de: Tema | Plugins essenciais | Estrutura de páginas",
+        "Otimização básica de performance",
+        "SEO básico (estrutura, títulos, URLs amigáveis)"
+      ],
+      "custo2": "R$ 2280,00",
+      "duracao2": "10 a 15 dias úteis",
+      "notincluded": [
+        "Criação de textos (copywriting)",
+        "Criação de identidade visual e logotipo",
+        "Hospedagem e domínio",
+        "Manutenção contínua",
+        "Funcionalidades fora do escopo aprovado"
+      ],
+      "totalsd": "R$ 3650,00",
+      "total": "R$ 3200,00",
+      "payment": "*entrada de 50% + 2X de r$ 800,00"
+    }
   ]
 }
