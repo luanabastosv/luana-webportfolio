@@ -18,8 +18,24 @@
     }
 
     p {
-      font-size: 18px;
+      font-size: 14px;
       color: var(--dark-color);
+      font-weight: 300;
+
+      strong {
+        font-weight: 600;
+      }
+    }
+
+    @include mq(1050px) {
+      h2 {
+        font-size: 6rem;
+        letter-spacing: -6px;
+      }
+
+      p {
+        font-size: 18px;
+      }
     }
   }
 
@@ -28,8 +44,9 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+
     gap: 2rem;
-    padding: 1.5rem;
+    padding: 2rem 1rem;
     width: 100vw;
     position: relative;
     left: 50%;
@@ -49,10 +66,13 @@
       font-size: 16px;
       display: flex;
       flex-direction: column;
+      justify-items: center;
       gap: 0.2rem;
+      width: max-content;
+      font-weight: 300;
 
       strong {
-        font-weight: 600;
+        font-weight: 700;
         font-size: 12px;
       }
     }
@@ -60,19 +80,26 @@
 
   .etapas {
     display: flex;
-    justify-content: center;
-    margin-top: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10rem;
+    svg {
+      width: 2rem;
+      color: var(--dark-color);
+      margin-bottom: 1rem;
+      rotate: 90deg;
+    }
     h2 {
       font-family: var(--body-font);
       text-transform: uppercase;
-      font-size: 20px;
+      font-size: 25px;
       font-weight: 300;
       color: var(--dark-color);
     }
   }
 
   .proposta-scope {
-    margin: 10rem 0;
+    margin: 1rem 0;
     display: flex;
     flex-direction: column;
     gap: 10rem;
@@ -88,6 +115,28 @@
       width: 100%;
       padding-top: 2rem;
       border-top: 1px solid var(--dark-color);
+      margin-top: 1rem;
+      padding-top: 4rem;
+
+      @include mq(1050px) {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 5rem;
+      }
+
+      .ni-content {
+        p {
+          font-weight: 300;
+          text-align: justify;
+          font-size: 16px;
+          width: 100%;
+          line-height: 25px;
+
+          strong {
+            font-weight: 700;
+          }
+        }
+      }
 
       .first-head,
       .second-head,
@@ -99,17 +148,24 @@
         gap: 1rem;
         width: 100%;
         margin-bottom: 1rem;
-        margin-top: 3rem;
+        margin-top: 0;
 
         p {
-          border: 1px solid var(--dark-color);
-          color: var(--dark-color);
           padding: 0.9rem;
-          border-radius: 100%;
+
+          aspect-ratio: 1 / 1;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          border: 1px solid var(--dark-color);
+          border-radius: 50%;
+
           font-family: var(--heading-font);
           background-color: var(--white);
-          font-size: 18px;
         }
+
         h2 {
           font-family: var(--body-font);
           text-transform: uppercase;
@@ -123,8 +179,7 @@
       }
 
       .first-content,
-      .second-content,
-      .ni-content {
+      .second-content {
         display: flex;
         flex-direction: column;
         gap: 2rem;
@@ -145,10 +200,11 @@
             display: flex;
             flex-direction: column;
             gap: 4rem;
+            line-height: 25px;
             li {
-              font-weight: 200;
+              font-weight: 300;
               strong {
-                font-weight: 600;
+                font-weight: 550;
               }
             }
           }
@@ -167,7 +223,7 @@
               font-family: var(--body-font);
               text-transform: uppercase;
               font-size: 16px;
-              font-weight: 200;
+              font-weight: 300;
               span {
                 text-decoration: underline;
               }
@@ -190,15 +246,28 @@
 
   .proposta-fprice {
     background-color: var(--dark-color);
-    padding: 3rem;
+    padding: 5rem 3rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    margin-top: 10rem;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 5rem;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    p {
+      color: vaR(--white);
+      font-size: 12px;
+    }
 
     .fprice-text {
       display: flex;
       flex-direction: column;
+      align-items: center;
       gap: 1rem;
 
       h2 {
@@ -206,13 +275,23 @@
         font-family: var(--body-font);
         text-transform: uppercase;
         font-size: 20px;
-        font-weight: 600;
+        font-weight: 300;
+        strong {
+          font-weight: 600;
+          text-decoration: underline;
+        }
       }
 
       div {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         gap: 0.5rem;
+
+        p:first-child {
+          text-decoration: line-through;
+          opacity: 0.7;
+          font-weight: 300;
+        }
 
         p {
           color: var(--white);
@@ -220,13 +299,58 @@
           font-weight: 600;
         }
       }
-    }
 
-    .fprice-payment {
-      p {
-        color: var(--white);
-        font-size: 14px;
-        text-align: center;
+      @include mq(1050px) {
+        flex-direction: row;
+        gap: 5rem;
+
+        div {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+  .cta-proposta {
+    display: flex;
+    justify-content: center;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+
+      font-size: 14px;
+      font-weight: 500;
+      text-align: center;
+
+      background-color: var(--dark-color);
+      color: var(--white);
+
+      padding: 1rem 2rem;
+      margin-top: 6rem;
+      max-width: 30rem;
+
+      border: 2px solid var(--dark-color);
+      border-radius: 14px;
+
+      text-decoration: none;
+      cursor: pointer;
+
+      transition: all 0.25s ease;
+
+      .arrow-icon {
+        width: 18px;
+        height: 18px;
+        transition: transform 0.25s ease;
+      }
+
+      &:hover {
+        background-color: var(--white);
+        color: var(--dark-color);
+
+        .arrow-icon {
+          transform: translateX(4px);
+        }
       }
     }
   }

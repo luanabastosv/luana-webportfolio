@@ -23,16 +23,26 @@ function PageProposals() {
         </p>
         <div class="v-divider"></div>
         <p>
-          <strong>Cliente: </strong> {proposta.client}
-        </p>
-        <div class="v-divider"></div>
-        <p>
           <strong>Data: </strong> {proposta.date}
         </p>
       </div>
 
       <div className="etapas">
         <h2>Entenda nossas etapas!</h2>
+        <svg
+          class="arrow-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M5 12H19M19 12L13 6M19 12L13 18"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
       </div>
 
       <div className="proposta-scope">
@@ -62,11 +72,16 @@ function PageProposals() {
                 />
               </svg>
               <div>
-                <h2> <span>Custo por etapa:</span></h2>
+                <h2>
+                  {" "}
+                  <span>Custo por etapa:</span>
+                </h2>
                 <p>{proposta.custo1}</p>
               </div>
               <div>
-                <h2><span>Duração da etapa:</span></h2>
+                <h2>
+                  <span>Duração da etapa:</span>
+                </h2>
                 <p>{proposta.duracao1}</p>
               </div>
             </div>
@@ -81,7 +96,7 @@ function PageProposals() {
             <div className="proposta-includes">
               <ul>
                 {proposta.content2.map((item, index) => (
-                  <li key={index}>{item}</li>
+                  <li key={index} dangerouslySetInnerHTML={{ __html: item }} />
                 ))}
               </ul>
             </div>
@@ -98,11 +113,15 @@ function PageProposals() {
                 />
               </svg>
               <div>
-                <h2>Custo por etapa:</h2>
+                <h2>
+                  <span>Custo por etapa:</span>
+                </h2>
                 <p>{proposta.custo2}</p>
               </div>
               <div>
-                <h2>Duração da etapa:</h2>
+                <h2>
+                  <span>Duração da etapa:</span>
+                </h2>
                 <p>{proposta.duracao2}</p>
               </div>
             </div>
@@ -114,29 +133,52 @@ function PageProposals() {
             <h2>
               O que <strong>não</strong> está incluso
             </h2>
-            <p>XX</p>
+            <p>xx</p>
           </div>
           <div className="ni-content">
-            <ul>
-              {proposta.notincluded.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
+            <p dangerouslySetInnerHTML={{ __html: proposta.notincluded }} />
           </div>
         </div>
       </div>
 
       <div className="proposta-fprice">
         <div className="fprice-text">
-          <h2>Investimento Total</h2>
+          <h2>
+            {" "}
+            <strong>Investimento</strong> Total
+          </h2>
           <div>
             <p>{proposta.totalsd}</p>
             <p>{proposta.total}</p>
           </div>
         </div>
-        <div className="fprice-payment">
-          <p>{proposta.payment}</p>
-        </div>
+        <p>{proposta.payment}</p>
+      </div>
+
+      <div className="cta-proposta">
+        <a
+          href="https://wa.me/5585997878686?text=Quero%20dar%20in%C3%ADcio%20ao%20projeto%20do%20meu%20site!%20=
+)"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {proposta.cta}
+
+          <svg
+            className="arrow-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M5 12H19M19 12L13 6M19 12L13 18"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </a>
       </div>
     </section>
   );
