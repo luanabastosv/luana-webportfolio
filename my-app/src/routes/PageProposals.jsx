@@ -3,10 +3,10 @@ import propostasData from "../data/website-content.json";
 
 function PageProposals() {
   const { id } = useParams();
-  const proposta = propostasData.propostas[id];
+  const proposta = propostasData.propostas.find((item) => item.slug === id);
 
   if (!proposta) {
-    return <p>Project not found.</p>;
+    return <p>Proposta não encontrada. =/</p>;
   }
 
   return (
