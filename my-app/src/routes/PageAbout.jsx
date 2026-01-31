@@ -89,6 +89,7 @@ function PageAbout() {
             <p>
               I’ve also got a pretty eclectic taste in <button>Music</button>{" "}
             </p>
+            <Spotify/>
 
             <p></p>
           </div>
