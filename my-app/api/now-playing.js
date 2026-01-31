@@ -1,4 +1,6 @@
 const TOKEN_ENDPOINT = "https://accounts.spotify.com/api/token";
+const NOW_PLAYING_ENDPOINT =
+  "https://api.spotify.com/v1/me/player/currently-playing";
 const RECENTLY_PLAYED_ENDPOINT =
   "https://api.spotify.com/v1/me/player/recently-played?limit=1";
 
@@ -33,35 +35,55 @@ export default async function handler(req, res) {
   try {
     const accessToken = await getAccessToken();
 
-    const response = await fetch(RECENTLY_PLAYED_ENDPOINT, {
+    // 1️⃣ tenta now playing
+    const nowPlayingRes = await fetch(NOW_PLAYING_ENDPOINT, {
       headers: {
         Authorization: `Bearer ${accessToken}`,
       },
     });
 
-    if (!response.ok) {
-      return res.status(200).json({ played: false });
+    if (nowPlayingRes.status === 200) {
+      const nowPlaying = await nowPlayingRes.json();
+
+      if (nowPlaying?.is_playing) {
+        const track = nowPlaying.item;
+
+        return res.status(200).json({
+          type: "now-playing",
+          title: track.name,
+          artist: track.artists.map((a) => a.name).join(", "),
+          album: track.album.name,
+          cover: track.album.images[0]?.url,
+        });
+      }
     }
 
-    const data = await response.json();
-    const item = data.items?.[0];
+    // 2️⃣ fallback → last played
+    const recentRes = await fetch(RECENTLY_PLAYED_ENDPOINT, {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    });
+
+    const recent = await recentRes.json();
+    const item = recent.items?.[0];
 
     if (!item) {
-      return res.status(200).json({ played: false });
+      return res.status(200).json({ active: false });
     }
 
     const track = item.track;
 
     res.status(200).json({
-      played: true,
+      type: "last-played",
       title: track.name,
       artist: track.artists.map((a) => a.name).join(", "),
       album: track.album.name,
       cover: track.album.images[0]?.url,
       playedAt: item.played_at,
     });
-  } catch (error) {
-    console.error(error);
+  } catch (err) {
+    console.error(err);
     res.status(500).json({ error: "Spotify error" });
   }
 }
