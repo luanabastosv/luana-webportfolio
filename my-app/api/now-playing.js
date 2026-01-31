@@ -32,6 +32,7 @@ async function getAccessToken() {
 }
 
 export default async function handler(req, res) {
+    res.setHeader("Cache-Control", "no-store, max-age=0");
   try {
     const accessToken = await getAccessToken();
 

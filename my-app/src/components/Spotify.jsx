@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 
 function Spotify() {
@@ -7,7 +6,9 @@ function Spotify() {
   useEffect(() => {
     async function fetchTrack() {
       try {
-        const res = await fetch("/api/now-playing");
+        const res = await fetch("/api/now-playing", {
+          cache: "no-store",
+        });
         const data = await res.json();
 
         // agora a API SEMPRE retorna algo quando possível
