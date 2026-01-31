@@ -2,24 +2,24 @@
 
 // Colors - Tangerine Theme
 :root {
-  --bkg-color: #fffcfb;
-  --dark-color: #DF6C25;
-  --medium-color: #FE914E;
-  --light-color: #FFBE96;
-  --white: #ffffff;
+ --bkg-color: #FFF4EF;
+--dark-color: #ED6335;
+--medium-color: #FF8210;
+--light-color: #FFD2D8;
+--white: #ffffff;
 
   // bubbles colors: 
-  --color-bg1: #FFEADE;
-  --color-bg2: #fff5ef;
+--color-bg1: #FFE6DD;
+--color-bg2: #FFF1EC;
 
-  --color1: 220, 100, 50;
-  --color2: 230, 140, 80;
-  --color3: 240, 200, 180;
-  --color4: 255, 200, 150;
-  --color5: 250, 230, 200;
-  --color6: 255, 180, 100;
-  --color7: 245, 210, 180;
-  --color-interactive: 255, 163, 81;
+--color1: 237, 99, 53;
+--color2: 255, 130, 16;
+--color3: 255, 210, 216;
+--color4: 255, 142, 158;
+--color5: 255, 240, 235;
+--color6: 255, 180, 120;
+--color7: 245, 200, 190;
+--color-interactive: 255, 130, 16;
 
   --blending: screen;
 
@@ -40,70 +40,72 @@
 }
 
 [data-theme="happy-woods"] {
-  --bkg-color: #E4F1E1;
-  --dark-color: #3B6B3B;
-  --medium-color: #5D8A5D;
-  --light-color: #A9C9A5;
+--bkg-color: #FAFFFB;
+--dark-color: #4E8F7A;      /* verde menta médio */
+--medium-color: #9DC4D5;
+--light-color: #E8FF40;
+--white: #ffffff;
 
 // bubbles colors:
-  --color-bg1: #E4F1E1;
-  --color-bg2: #CFE8D2;
+--color-bg1: #ECF7F3;
+--color-bg2: #F5FFFA;
 
-  --color1: 70, 120, 70;
-  --color2: 90, 150, 90;
-  --color3: 120, 180, 120;
-  --color4: 150, 200, 150;
-  --color5: 190, 225, 185;
-  --color6: 110, 160, 110;
-  --color7: 165, 205, 170;
-  --color-interactive: 80, 140, 80;
+--color1: 78, 143, 122;
+--color2: 157, 196, 213;
+--color3: 232, 255, 64;
+--color4: 190, 225, 210;
+--color5: 245, 255, 250;
+--color6: 170, 210, 195;
+--color7: 210, 235, 225;
+--color-interactive: 232, 255, 64;
 
   --blending: screen;
 }
 
 [data-theme="surfing-sky"] {
-  --bkg-color: #dee4ed;
-  --dark-color: #054394;
-  --medium-color: #3989a2;
-  --light-color: #add4f8;
+    --bkg-color: #ffffff;
+--dark-color: #0259DD;
+--medium-color: #84AFFB;
+--light-color: #DDE9FF;
+--white: #ffffff;
+
 
 // bubbles colors:
-  --color-bg1: #dee4ed;
-  --color-bg2: #b9d3ee;
+--color-bg1: #FFF3EC; /* variação clara do fundo */
+--color-bg2: #F2F6FF; 
 
-  --color1: 40, 100, 180;
-  --color2: 60, 130, 200;
-  --color3: 120, 170, 220;
-  --color4: 160, 200, 235;
-  --color5: 190, 220, 245;
-  --color6: 90, 150, 210;
-  --color7: 150, 190, 230;
-  --color-interactive: 70, 130, 200;
+--color1: 2, 89, 221;     /* azul principal */
+--color2: 132, 175, 251; /* azul claro */
+--color3: 255, 225, 210; /* fundo rosado */
+--color4: 255, 102, 72;  /* coral / CTA */
+--color5: 240, 245, 255; /* quase branco */
+--color6: 120, 160, 240; /* azul intermediário */
+--color7: 255, 180, 160; /* coral suave */
+--color-interactive: 255, 102, 72;
+ 
 
   --blending: screen;
 }
 [data-theme="strawberry-fields"] {
-  --bkg-color: #ffb7b8;
-  --dark-color: #db1516;
-  --medium-color: #e53939;
-  --light-color: #ff8f8e;
+ --bkg-color: #FBFAFF;
+--dark-color: #6B3CFF;      /* roxo neon */
+--medium-color: #B9A9FF;    /* lavanda */
+--light-color: #E6DFFF;     /* lilás claro */
+--white: #ffffff;
 
 
 // bubbles colors:
-  --color-bg1: #ffb7b8;
-  --color-bg2: #ff9a9c;
+--color-bg1: #F1EEFF;
+--color-bg2: #FAF9FF;
 
-   
-  --color1: 210, 50, 60;
-  --color2: 230, 80, 90;
-  --color3: 240, 150, 160;
-  --color4: 255, 170, 170;
-  --color5: 255, 200, 200;
-  --color6: 230, 110, 120;
-  --color7: 250, 160, 170;
-
-
-  --color-interactive: 255, 90, 110;
+--color1: 107, 60, 255;
+--color2: 185, 169, 255;
+--color3: 230, 223, 255;
+--color4: 200, 180, 255;
+--color5: 250, 249, 255;
+--color6: 155, 120, 255;
+--color7: 220, 210, 255;
+--color-interactive: 107, 60, 255;
 
   --blending: screen;
 }
