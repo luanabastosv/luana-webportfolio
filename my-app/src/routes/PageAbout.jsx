@@ -1,9 +1,14 @@
 import { useTheme } from "../context/ThemeContext";
-import { useState, useEffect } from "react";
-import Spotify from "../components/Spotify";
+import { useState, useEffect, useRef } from "react";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function PageAbout() {
   const { theme } = useTheme();
+  const pageRef = useRef(null);
 
   const photos = [
     `/assets/images/luana-photo-1-${theme}.png`,
@@ -22,8 +27,189 @@ function PageAbout() {
     setIndex(0);
   }, [theme]);
 
+  useEffect(() => {
+    const reduceMotion =
+      typeof window !== "undefined" &&
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (reduceMotion) return;
+
+    const ctx = gsap.context(() => {
+      /* ================= HERO ================= */
+      gsap.set(".hero-about h1, .hero-about .photo-container, .hero-about h2", {
+        autoAlpha: 1,
+        y: 0,
+      });
+
+      gsap.fromTo(
+        ".hero-about h1",
+        { autoAlpha: 0, y: 30 },
+        { autoAlpha: 1, y: 0, duration: 0.8, ease: "power3.out" }
+      );
+
+      gsap.fromTo(
+        ".hero-about .photo-container",
+        { autoAlpha: 0, y: 24 },
+        {
+          autoAlpha: 1,
+          y: 0,
+          duration: 0.9,
+          delay: 0.2,
+          ease: "power3.out",
+        }
+      );
+
+      gsap.fromTo(
+        ".hero-about h2",
+        { autoAlpha: 0, y: 18 },
+        {
+          autoAlpha: 1,
+          y: 0,
+          duration: 0.7,
+          delay: 0.35,
+          ease: "power3.out",
+        }
+      );
+
+      /* ================= ARTICLE ================= */
+      gsap.fromTo(
+        "article p",
+        { autoAlpha: 0, y: 28 },
+        {
+          scrollTrigger: {
+            trigger: "article",
+            start: "top 80%",
+          },
+          autoAlpha: 1,
+          y: 0,
+          stagger: 0.15,
+          duration: 0.8,
+          ease: "power3.out",
+        }
+      );
+
+      /* ================= STAMPS ================= */
+      gsap.fromTo(
+        ".stamps",
+        { autoAlpha: 0, scale: 0.96 },
+        {
+          scrollTrigger: {
+            trigger: ".stamps",
+            start: "top 85%",
+          },
+          autoAlpha: 1,
+          scale: 1,
+          duration: 0.8,
+          ease: "power3.out",
+        }
+      );
+
+      /* ================= SKILLS ================= */
+      gsap.fromTo(
+        ".skills h2, .skills > p",
+        { autoAlpha: 0, y: 22 },
+        {
+          scrollTrigger: {
+            trigger: ".skills",
+            start: "top 80%",
+          },
+          autoAlpha: 1,
+          y: 0,
+          stagger: 0.15,
+          duration: 0.8,
+          ease: "power3.out",
+        }
+      );
+
+      gsap.fromTo(
+        ".skills ul li",
+        { autoAlpha: 0, y: 14 },
+        {
+          scrollTrigger: {
+            trigger: ".skills",
+            start: "top 75%",
+          },
+          autoAlpha: 1,
+          y: 0,
+          stagger: 0.06,
+          duration: 0.55,
+          ease: "power3.out",
+        }
+      );
+
+      /* ============ PREVIOUS EXPERIENCES ============ */
+      gsap.fromTo(
+        ".previous-experiences h2, .previous-experiences > p",
+        { autoAlpha: 0, y: 22 },
+        {
+          scrollTrigger: {
+            trigger: ".previous-experiences",
+            start: "top 80%",
+          },
+          autoAlpha: 1,
+          y: 0,
+          stagger: 0.15,
+          duration: 0.8,
+          ease: "power3.out",
+        }
+      );
+
+      gsap.fromTo(
+        ".previous-experiences > div > div",
+        { autoAlpha: 0, y: 18 },
+        {
+          scrollTrigger: {
+            trigger: ".previous-experiences",
+            start: "top 75%",
+          },
+          autoAlpha: 1,
+          y: 0,
+          stagger: 0.12,
+          duration: 0.7,
+          ease: "power3.out",
+        }
+      );
+
+      /* ================= EDUCATION ================= */
+      gsap.fromTo(
+        ".education h2, .education > p",
+        { autoAlpha: 0, y: 22 },
+        {
+          scrollTrigger: {
+            trigger: ".education",
+            start: "top 80%",
+          },
+          autoAlpha: 1,
+          y: 0,
+          stagger: 0.15,
+          duration: 0.8,
+          ease: "power3.out",
+        }
+      );
+
+      gsap.fromTo(
+        ".education > div > div",
+        { autoAlpha: 0, y: 16 },
+        {
+          scrollTrigger: {
+            trigger: ".education",
+            start: "top 75%",
+          },
+          autoAlpha: 1,
+          y: 0,
+          stagger: 0.12,
+          duration: 0.7,
+          ease: "power3.out",
+        }
+      );
+    }, pageRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <main>
+    <main ref={pageRef}>
       <section className="page-about">
         <div className="hero-about">
           <div>
@@ -89,7 +275,6 @@ function PageAbout() {
             <p>
               I’ve also got a pretty eclectic taste in <button>Music</button>{" "}
             </p>
-            <Spotify/>
 
             <p></p>
           </div>
