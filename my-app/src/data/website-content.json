@@ -121,6 +121,38 @@
       "total": "R$ 3200",
       "payment": "Forma de pagamento: Entrada de 50% + 2x R$ 800,00!",
       "cta": "Quero começar o meu projeto!"
+    },
+    {
+      "slug": "p-nori-construtora",
+      "image": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108.8 107.23' fill='none'><path fill='currentColor' d='M108.8,64.09c-1.4,10.42-14.3,13.92-21.98,6.51C64.93,49.49,45.69,23.3,23.69,2.01l-1.24-2.01h85.59l.75.75v63.34Z'/><path fill='currentColor' d='M0,43.14c1.2-8.43,11.57-13.42,18.93-8.95,22.72,23.12,43.93,47.96,66.43,71.27l.48,1.77H.75l-.75-.75v-63.34Z'/></svg>",
+      "title": "&#123;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Nori Construtora,</strong> Rodrigo Nori&nbsp;&nbsp;&nbsp;&nbsp;&#125;",
+      "project": "Site Nori Construtora",
+      "client": "Rodrigo Nori",
+      "date": "Fevereiro/ 2026",
+      "fase1": "Etapa: <strong>Web Design</strong>",
+      "content1": [
+        "Criação de <strong>mockups de interface (UI/UX)</strong> para aprovação",
+        "Desenvolvimento de <strong>layout</strong> (FIGMA)",
+        "<strong>Definição de:</strong> <br><br>Estrutura das páginas <strong>*</strong> Hierarquia visual <strong>*</strong> Tipografia e Paleta de cores <strong>(de acordo com branding existente)</strong>",
+        "<strong>Páginas:</strong> <br><br>Home <strong>*</strong> Quem Somos <strong>*</strong> Nossos Serviços <strong>*</strong> Projetos Finalizados <strong>*</strong> Projeto Individual"
+      ],
+      "custo1": "R$ 1850,00",
+      "duracao1": "8 a 12 dias úteis",
+      "fase2": "Etapa: <strong>Web Development</strong>",
+      "content2": [
+        "Implementação do layout aprovado em <strong>WordPress</strong>",
+        "Desenvolvimento responsivo <strong>(desktop, tablet e mobile)</strong>",
+        "Configuração de: <strong>Tema</strong> | <strong>Plugins</strong> essenciais | Estrutura de <strong>páginas</strong>",
+        "Otimização básica de <strong>performance</strong>",
+        "<strong>SEO</strong> básico (estrutura, títulos, URLs amigáveis)"
+      ],
+      "custo2": "R$ 3350,00",
+      "duracao2": "13 a 18 dias úteis",
+      "notincluded": "Criação de textos <strong>(copywriting)</strong> <strong>*</strong> Criação de identidade visual e logotipo <strong>*</strong> Hospedagem e domínio <strong>*</strong> <strong>Manutenção</strong> contínua <strong>*</strong> Funcionalidades fora do escopo aprovado",
+      "totalsd": "R$ 5200",
+      "total": "R$ 4800",
+      "payment": "Forma de pagamento: Entrada de 50% + 2x R$ 1200,00!",
+      "cta": "Quero começar o meu projeto!"
     }
   ]
 }

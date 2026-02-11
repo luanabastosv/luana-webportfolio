@@ -1,4 +1,3 @@
-
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import gsap from "gsap";
@@ -55,6 +54,9 @@ function PageProposals() {
       <div className="proposta-head animate">
         <h2>Proposta</h2>
         <p dangerouslySetInnerHTML={{ __html: proposta.title }} />
+         <div
+          dangerouslySetInnerHTML={{ __html: proposta.image }}
+        />
       </div>
 
       <div className="proposta-bar ">
@@ -103,24 +105,18 @@ function PageProposals() {
             </div>
 
             <div className="proposta-price">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 135 135"
-                className="icon"
-              >
-                <path
-                  d="M0 59.758H26.9982L2.19563 48.8821L8.24245 34.549L32.7573 44.2608L14.1742 25.4525L25.0992 14.6562L26.3564 15.0236L44.2578 32.7562L35.0503 9.85786L35.0193 8.26874L49.1316 2.4036L59.3085 26.1209V1.10663H75.2445L75.6916 26.9973L85.5055 3.39957L91.1849 32.3092L109.197 14.6518L101.804 44.699L132.592 49.1255L108.44 59.7536H134.336V75.6891H107.997L132.751 86.5783L127.435 99.7693L102.685 91.1863L119.971 108.645L109.538 120.733L90.7334 102.248L100.437 126.771L85.0761 131.578L76.1165 109.331V135H59.9636L59.2952 108.441L49.0607 132.729L34.5191 126.395L44.2445 102.244L25.8916 120.419L15.0108 110.898L32.7396 90.7348L8.21589 100.411L2.1912 86.503L26.0952 75.6846H0V59.758Z"
-                  fill="currentColor"
-                />
-              </svg>
-
+    
               <div>
-                <h2><span>Custo por etapa:</span></h2>
+                <h2>
+                  <span>Custo - 1ª Etapa:</span>
+                </h2>
                 <p>{proposta.custo1}</p>
               </div>
 
               <div>
-                <h2><span>Duração da etapa:</span></h2>
+                <h2>
+                  <span>Duração - 1ª Etapa:</span>
+                </h2>
                 <p>{proposta.duracao1}</p>
               </div>
             </div>
@@ -145,12 +141,16 @@ function PageProposals() {
 
             <div className="proposta-price">
               <div>
-                <h2><span>Custo por etapa:</span></h2>
+                <h2>
+                  <span>Custo - 2ª Etapa:</span>
+                </h2>
                 <p>{proposta.custo2}</p>
               </div>
 
               <div>
-                <h2><span>Duração da etapa:</span></h2>
+                <h2>
+                  <span>Duração - 2ª Etapa:</span>
+                </h2>
                 <p>{proposta.duracao2}</p>
               </div>
             </div>
@@ -160,7 +160,9 @@ function PageProposals() {
         {/* NÃO INCLUSO */}
         <div className="not-included animate">
           <div className="ni-head">
-            <h2>O que <strong>não</strong> está incluso</h2>
+            <h2>
+              O que <strong>não</strong> está incluso
+            </h2>
             <p>xx</p>
           </div>
           <div className="ni-content">
@@ -171,7 +173,9 @@ function PageProposals() {
 
       <div className="proposta-fprice animate">
         <div className="fprice-text">
-          <h2><strong>Investimento</strong> Total</h2>
+          <h2>
+            <strong>Investimento</strong> Total
+          </h2>
           <div>
             <p>{proposta.totalsd}</p>
             <p>{proposta.total}</p>
